@@ -9,6 +9,7 @@ import Cocoa
 
 class NotchViewController: NSViewController {
     
+    @IBOutlet weak var centerImage: NSImageView!
     @IBOutlet weak var quitButton: NSButton!
     var mouseTracking: NSTrackingArea?
 
@@ -38,8 +39,7 @@ class NotchViewController: NSViewController {
     }
     
     func startMouseTracking(options: NSTrackingArea.Options = [.activeAlways, .mouseEnteredAndExited]) {
-        let newRect = NSRect(x: view.bounds.minX + 30, y: view.bounds.minY, width: view.bounds.width - 60, height: view.bounds.height)
-        let tracking = NSTrackingArea(rect: newRect, options: options, owner: self, userInfo: nil)
+        let tracking = NSTrackingArea(rect: centerImage.frame, options: options, owner: self, userInfo: nil)
         view.addTrackingArea(tracking)
         mouseTracking = tracking
     }

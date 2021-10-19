@@ -59,7 +59,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let screenSize = NSScreen.main!.frame.size
         let menubarHeight = NSApplication.shared.mainMenu!.menuBarHeight
         
-        notchWindow.setFrame(NSRect(x: screenSize.width / 2 - 100, y: screenSize.height - menubarHeight, width: 200, height: menubarHeight), display: true)
+        notchWindow.setFrame(NSRect(x: 0, y: screenSize.height - menubarHeight, width: screenSize.width, height: menubarHeight), display: true)
     }
 
     
