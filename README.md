@@ -4,7 +4,7 @@
 
 Pretend you have the latest MacBook Pro!
 
-![Icon](icon.png)
+![Icon](Icon.png)
 
 - Hover to reveal the quit button.
 - That's it!
