@@ -8,7 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NotchViewController" customModule="Notch_Simulator" customModuleProvider="target">
             <connections>
-                <outlet property="quitButton" destination="RXX-t4-bUQ" id="Ncv-BB-Sxh"/>
+                <outlet property="quitButton" destination="7sh-Ob-MI3" id="Mde-or-wkh"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -18,20 +18,21 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RXX-t4-bUQ">
-                    <rect key="frame" x="223" y="127" width="34" height="18"/>
-                    <buttonCell key="cell" type="inline" title="Quit" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="Gkx-Lw-4LL">
+                <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7sh-Ob-MI3">
+                    <rect key="frame" x="225" y="128" width="30" height="16"/>
+                    <buttonCell key="cell" type="bevel" title="Quit" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="ju6-OK-2f9">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="smallSystemBold"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <color key="contentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
-                        <action selector="quit:" target="-2" id="5e0-ms-Khk"/>
+                        <action selector="quit:" target="-2" id="Q1u-pk-SKt"/>
                     </connections>
                 </button>
             </subviews>
             <constraints>
-                <constraint firstItem="RXX-t4-bUQ" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="Y3U-mV-BP7"/>
-                <constraint firstItem="RXX-t4-bUQ" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="eWq-vs-00E"/>
+                <constraint firstItem="7sh-Ob-MI3" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="JEF-Io-Wyj"/>
+                <constraint firstItem="7sh-Ob-MI3" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="b6R-IB-ztg"/>
             </constraints>
             <point key="canvasLocation" x="140" y="154"/>
         </customView>
