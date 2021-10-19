@@ -66,7 +66,7 @@
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="H6k-03-4mJ">
                     <rect key="frame" x="109" y="125" width="81" height="24"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="下雨吗？" id="B5o-4F-wKp">
-                        <font key="font" size="20" name=".PingFangSC-Regular"/>
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>

@@ -20,9 +20,11 @@ class NotchViewController: NSViewController {
 //        view.layer?.backgroundColor = .black
 //        view.layer?.cornerRadius = 10
 //        view.layer?.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
         startMouseTracking()
-        
     }
     
     override func mouseEntered(with event: NSEvent) {
@@ -36,7 +38,8 @@ class NotchViewController: NSViewController {
     }
     
     func startMouseTracking(options: NSTrackingArea.Options = [.activeAlways, .mouseEnteredAndExited]) {
-        let tracking = NSTrackingArea(rect: view.bounds, options: options, owner: self, userInfo: nil)
+        let newRect = NSRect(x: view.bounds.minX + 30, y: view.bounds.minY, width: view.bounds.width - 60, height: view.bounds.height)
+        let tracking = NSTrackingArea(rect: newRect, options: options, owner: self, userInfo: nil)
         view.addTrackingArea(tracking)
         mouseTracking = tracking
     }
