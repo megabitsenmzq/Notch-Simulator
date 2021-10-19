@@ -28,6 +28,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             UserDefaults.standard.set(true, forKey: "viewMyApps")
         }
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("NSApplicationDidChangeScreenParametersNotification"), object: nil)
+        
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -37,7 +39,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
         return true
     }
-
+    @objc func methodOfReceivedNotification(notification: Notification) {
+        resizeWindow();
+    }
     
     func setupWindow() {
         notchWindow.styleMask = .borderless
@@ -47,16 +51,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         notchWindow.level = .screenSaver
         notchWindow.contentViewController = notchViewController
         
-        let screenSize = NSScreen.main!.frame.size
-        let menubarHeight = NSApplication.shared.mainMenu!.menuBarHeight
-        
-        notchWindow.setFrame(NSRect(x: screenSize.width / 2 - 100, y: screenSize.height - menubarHeight, width: 200, height: menubarHeight), display: true)
+        resizeWindow();
         
         notchWindowController.contentViewController = notchWindow.contentViewController
         notchWindowController.window = notchWindow
         notchWindowController.showWindow(self)
     }
 
+    func resizeWindow(){
+        let screenSize = NSScreen.main!.frame.size
+        let menubarHeight = NSApplication.shared.mainMenu!.menuBarHeight
+        notchWindow.setFrame(NSRect(x: screenSize.width / 2 - 100, y: screenSize.height - menubarHeight, width: 200, height: menubarHeight), display: true)
+    }
     
     func setupMyAppWindow() {
         myAppsWindow.styleMask = [.titled, .closable]
