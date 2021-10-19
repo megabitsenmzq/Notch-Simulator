@@ -47,14 +47,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         notchWindow.level = .screenSaver
         notchWindow.contentViewController = notchViewController
         
-        let screenSize = NSScreen.main!.frame.size
-        let menubarHeight = NSApplication.shared.mainMenu!.menuBarHeight
-        
-        notchWindow.setFrame(NSRect(x: screenSize.width / 2 - 100, y: screenSize.height - menubarHeight, width: 200, height: menubarHeight), display: true)
+        NotificationCenter.default.addObserver(self, selector: #selector(resizeWindow), name: NSApplication.didChangeScreenParametersNotification, object: nil)
+        resizeWindow()
         
         notchWindowController.contentViewController = notchWindow.contentViewController
         notchWindowController.window = notchWindow
         notchWindowController.showWindow(self)
+    }
+    
+    @objc func resizeWindow() {
+        let screenSize = NSScreen.main!.frame.size
+        let menubarHeight = NSApplication.shared.mainMenu!.menuBarHeight
+        
+        notchWindow.setFrame(NSRect(x: screenSize.width / 2 - 100, y: screenSize.height - menubarHeight, width: 200, height: menubarHeight), display: true)
     }
 
     
