@@ -18,8 +18,12 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RqM-z2-cpO">
+                    <rect key="frame" x="161" y="251" width="158" height="21"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="notch" id="gWi-md-2cf"/>
+                </imageView>
                 <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7sh-Ob-MI3">
-                    <rect key="frame" x="225" y="128" width="30" height="16"/>
+                    <rect key="frame" x="0.0" y="128" width="480" height="16"/>
                     <buttonCell key="cell" type="bevel" title="Quit" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="ju6-OK-2f9">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -33,8 +37,14 @@
             <constraints>
                 <constraint firstItem="7sh-Ob-MI3" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="JEF-Io-Wyj"/>
                 <constraint firstItem="7sh-Ob-MI3" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="b6R-IB-ztg"/>
+                <constraint firstItem="RqM-z2-cpO" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="imP-j9-J3D"/>
+                <constraint firstItem="RqM-z2-cpO" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="rR6-ZO-Wou"/>
+                <constraint firstItem="7sh-Ob-MI3" firstAttribute="width" secondItem="Hz6-mo-xeY" secondAttribute="width" id="tI6-lA-dJx"/>
             </constraints>
             <point key="canvasLocation" x="140" y="154"/>
         </customView>
     </objects>
+    <resources>
+        <image name="notch" width="158" height="21"/>
+    </resources>
 </document>

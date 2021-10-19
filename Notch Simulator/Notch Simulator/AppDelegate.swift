@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Notch Simulator
 //
-//  Created by 孟金羽 on 2021/10/19.
+//  Created by Jinyu Meng on 2021/10/19.
 //
 
 import Cocoa
@@ -14,10 +14,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let notchWindow = NSWindow()
     let notchWindowController = NSWindowController()
     let notchViewController = NotchViewController(nibName: "NotchViewController", bundle: nil)
+    
+    let myAppsWindow = NSWindow()
+    let myAppsWindowController = NSWindowController()
+    let myAppsViewController = MyAppsViewController(nibName: "MyAppsViewController", bundle: nil)
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         setupWindow()
+        
+        if !UserDefaults.standard.bool(forKey: "viewMyApps") {
+            setupMyAppWindow()
+            UserDefaults.standard.set(true, forKey: "viewMyApps")
+        }
+        
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -47,5 +57,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         notchWindow.setFrame(NSRect(x: screenSize.width / 2 - 100, y: screenSize.height - menubarHeight, width: 200, height: menubarHeight), display: true)
     }
 
+    
+    func setupMyAppWindow() {
+        myAppsWindow.styleMask = [.titled, .closable]
+        myAppsWindow.backingType = .buffered
+        myAppsWindow.title = "MyApps"
+        myAppsWindow.contentViewController = myAppsViewController
+        myAppsWindowController.contentViewController = myAppsWindow.contentViewController
+        myAppsWindowController.window = myAppsWindow
+        myAppsWindowController.showWindow(self)
+        
+        myAppsWindow.center()
+        NSApplication.shared.activate(ignoringOtherApps: true)
+    }
 }
 

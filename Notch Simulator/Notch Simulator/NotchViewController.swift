@@ -2,7 +2,7 @@
 //  NotchViewController.swift
 //  Notch Simulator
 //
-//  Created by 孟金羽 on 2021/10/19.
+//  Created by Jinyu Meng on 2021/10/19.
 //
 
 import Cocoa
@@ -14,11 +14,12 @@ class NotchViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
-        view.wantsLayer = true
-        view.layer?.backgroundColor = .black
-        view.layer?.cornerRadius = 10
-        view.layer?.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+
+        // Old Codes
+//        view.wantsLayer = true
+//        view.layer?.backgroundColor = .black
+//        view.layer?.cornerRadius = 10
+//        view.layer?.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
         startMouseTracking()
         
