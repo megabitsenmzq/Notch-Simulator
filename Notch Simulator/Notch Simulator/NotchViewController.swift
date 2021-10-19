@@ -15,12 +15,6 @@ class NotchViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Old Codes
-//        view.wantsLayer = true
-//        view.layer?.backgroundColor = .black
-//        view.layer?.cornerRadius = 10
-//        view.layer?.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
     override func viewDidAppear() {

@@ -10,9 +10,9 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
-    let notchWindow = NSWindow()
-    let notchWindowController = NSWindowController()
+    let screens = NSScreen.screens
+    var windows = [NotchWindow]()
+    var windowControllers = [NSWindowController]()
     let notchViewController = NotchViewController(nibName: "NotchViewController", bundle: nil)
     
     let myAppsWindow = NSWindow()
@@ -22,6 +22,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         setupWindow()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(resetWindow), name: NSApplication.didChangeScreenParametersNotification, object: nil)
         
         if !UserDefaults.standard.bool(forKey: "viewMyApps") {
             setupMyAppWindow()
@@ -40,26 +42,44 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     
     func setupWindow() {
-        notchWindow.styleMask = .borderless
-        notchWindow.backingType = .buffered
-        notchWindow.backgroundColor = .clear
-        notchWindow.hasShadow = false
-        notchWindow.level = .screenSaver
-        notchWindow.contentViewController = notchViewController
+        if screens.count == 0 {
+            NSApplication.shared.terminate(self)
+        }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(resizeWindow), name: NSApplication.didChangeScreenParametersNotification, object: nil)
-        resizeWindow()
-        
-        notchWindowController.contentViewController = notchWindow.contentViewController
-        notchWindowController.window = notchWindow
-        notchWindowController.showWindow(self)
-    }
-    
-    @objc func resizeWindow() {
-        let screenSize = NSScreen.main!.frame.size
         let menubarHeight = NSApplication.shared.mainMenu!.menuBarHeight
         
-        notchWindow.setFrame(NSRect(x: 0, y: screenSize.height - menubarHeight, width: screenSize.width, height: menubarHeight), display: true)
+        for i in 0..<screens.count {
+            let notchWindow = NotchWindow()
+            notchWindow.targetScreen = screens[i]
+            notchWindow.styleMask = .borderless
+            notchWindow.backingType = .buffered
+            notchWindow.backgroundColor = .clear
+            notchWindow.hasShadow = false
+            notchWindow.level = .screenSaver
+            notchWindow.contentViewController = NotchViewController(nibName: "NotchViewController", bundle: nil)
+            
+            let screenFrame = screens[i].frame
+            notchWindow.setFrame(NSRect(x: screenFrame.origin.x, y: screenFrame.origin.y + screenFrame.size.height - menubarHeight, width: screenFrame.size.width, height: menubarHeight), display: true)
+            
+            let notchWindowController = NSWindowController()
+            notchWindowController.contentViewController = notchWindow.contentViewController
+            notchWindowController.window = notchWindow
+            notchWindowController.showWindow(self)
+            
+            windows.append(notchWindow)
+            windowControllers.append(notchWindowController)
+        }
+    }
+    
+    @objc func resetWindow() {
+        for item in windows {
+            item.close()
+        }
+        
+        windows.removeAll()
+        windowControllers.removeAll()
+        
+        setupWindow()
     }
 
     

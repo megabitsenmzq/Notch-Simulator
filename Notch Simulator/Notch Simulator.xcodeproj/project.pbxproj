@@ -14,6 +14,7 @@
 		C05C0B8A271E5D5C007BDF89 /* NotchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05C0B88271E5D5C007BDF89 /* NotchViewController.xib */; };
 		C05C0B90271E861F007BDF89 /* MyAppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05C0B8E271E861F007BDF89 /* MyAppsViewController.swift */; };
 		C05C0B91271E861F007BDF89 /* MyAppsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05C0B8F271E861F007BDF89 /* MyAppsViewController.xib */; };
+		C05C0B93271F03DA007BDF89 /* NotchWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05C0B92271F03DA007BDF89 /* NotchWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		C05C0B8D271E6783007BDF89 /* Notch-Simulator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Notch-Simulator-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C05C0B8E271E861F007BDF89 /* MyAppsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppsViewController.swift; sourceTree = "<group>"; };
 		C05C0B8F271E861F007BDF89 /* MyAppsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAppsViewController.xib; sourceTree = "<group>"; };
+		C05C0B92271F03DA007BDF89 /* NotchWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				C05C0B7A271E59DA007BDF89 /* Assets.xcassets */,
 				C05C0B88271E5D5C007BDF89 /* NotchViewController.xib */,
 				C05C0B87271E5D5C007BDF89 /* NotchViewController.swift */,
+				C05C0B92271F03DA007BDF89 /* NotchWindow.swift */,
 				C05C0B8F271E861F007BDF89 /* MyAppsViewController.xib */,
 				C05C0B8E271E861F007BDF89 /* MyAppsViewController.swift */,
 				C05C0B7C271E59DA007BDF89 /* MainMenu.xib */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C05C0B93271F03DA007BDF89 /* NotchWindow.swift in Sources */,
 				C05C0B90271E861F007BDF89 /* MyAppsViewController.swift in Sources */,
 				C05C0B79271E59D6007BDF89 /* AppDelegate.swift in Sources */,
 				C05C0B89271E5D5C007BDF89 /* NotchViewController.swift in Sources */,
@@ -287,7 +291,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Notch Simulator/Notch_Simulator.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = QJN4A73F8D;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -301,7 +305,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JinyuMeng.Notch-Simulator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -317,7 +321,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Notch Simulator/Notch_Simulator.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = QJN4A73F8D;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -331,7 +335,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JinyuMeng.Notch-Simulator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
