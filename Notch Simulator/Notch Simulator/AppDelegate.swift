@@ -58,6 +58,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func resizeWindow() {
         let screenSize = NSScreen.main!.frame.size
         let menubarHeight = NSApplication.shared.mainMenu!.menuBarHeight
+
+        for s in NSScreen.screens {
+            let n = s.deviceDescription[NSDeviceDescriptionKey(rawValue: "NSScreenNumber")] as! NSNumber
+            let isBuildin = CGDisplayIsBuiltin(n.uint32Value)
+            if (isBuildin != 0) {
+                screenSize = s.frame.size
+            }
+        }
         
         notchWindow.setFrame(NSRect(x: screenSize.width / 2 - 100, y: screenSize.height - menubarHeight, width: 200, height: menubarHeight), display: true)
     }
