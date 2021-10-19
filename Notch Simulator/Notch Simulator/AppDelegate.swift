@@ -41,9 +41,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         notchWindowController.window = notchWindow
         notchWindowController.showWindow(self)
         
+        resizeWindow();
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("NSApplicationDidChangeScreenParametersNotification"), object: nil)
+         
+        
+    }
+    @objc func methodOfReceivedNotification(notification: Notification) {
+        resizeWindow();
+    }
+    func resizeWindow(){
         let screenSize = NSScreen.main!.frame.size
         let menubarHeight = NSApplication.shared.mainMenu!.menuBarHeight
-        
         notchWindow.setFrame(NSRect(x: screenSize.width / 2 - 100, y: screenSize.height - menubarHeight, width: 200, height: menubarHeight), display: true)
     }
 
