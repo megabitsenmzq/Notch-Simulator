@@ -10,6 +10,9 @@ Pretend you have the latest MacBook Pro! [Download](https://github.com/megabitse
 - Hover to reveal the quit button.
 - That's it!
 
+If you have encountered permission problems while trying to run the app, you can use this tool to solve it: 
+[Permissions Reset](https://ohanaware.com/permissionsreset/)
+
 ## About Me
 
 Twitter：[@Megabits](https://twitter.com/Megabits_mzq)
