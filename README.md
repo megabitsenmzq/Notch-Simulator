@@ -7,6 +7,8 @@ Pretend you have the latest MacBook Pro! [Download](https://github.com/megabitse
 
 ![Icon](Icon.png)
 
+## Preview
+
 ![Preview](NotchPreiew.png)
 
 - Fake camera support.
