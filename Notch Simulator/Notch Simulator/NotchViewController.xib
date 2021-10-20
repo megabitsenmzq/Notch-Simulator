@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RqM-z2-cpO" userLabel="center">
-                    <rect key="frame" x="161" y="251" width="158" height="21"/>
+                    <rect key="frame" x="160" y="251" width="160" height="21"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="notch" id="gWi-md-2cf"/>
                 </imageView>
                 <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TmC-Le-APu" userLabel="camera">
@@ -37,10 +37,10 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="topleft" id="Jvz-J8-aqe"/>
                 </imageView>
                 <stackView hidden="YES" distribution="fill" orientation="horizontal" alignment="top" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C66-PT-WNf">
-                    <rect key="frame" x="198" y="252" width="85" height="19"/>
+                    <rect key="frame" x="197" y="252" width="87" height="19"/>
                     <subviews>
                         <button translatesAutoresizingMaskIntoConstraints="NO" id="Z0x-LA-GDh" userLabel="close">
-                            <rect key="frame" x="0.0" y="0.0" width="35" height="19"/>
+                            <rect key="frame" x="0.0" y="0.0" width="36" height="19"/>
                             <buttonCell key="cell" type="square" title="-     -" bezelStyle="shadowlessSquare" image="close" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="CwH-Qx-33h">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
@@ -51,7 +51,7 @@
                             </connections>
                         </button>
                         <button translatesAutoresizingMaskIntoConstraints="NO" id="ybX-RA-o0H" userLabel="more">
-                            <rect key="frame" x="50" y="0.0" width="35" height="19"/>
+                            <rect key="frame" x="51" y="0.0" width="36" height="19"/>
                             <buttonCell key="cell" type="square" title="-     -" bezelStyle="shadowlessSquare" image="menu" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="3qo-SW-G4Z">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
@@ -89,9 +89,9 @@
     </objects>
     <resources>
         <image name="camera" width="16" height="16"/>
-        <image name="close" width="16" height="17"/>
-        <image name="menu" width="16" height="16"/>
-        <image name="notch" width="158" height="21"/>
+        <image name="close" width="18" height="19"/>
+        <image name="menu" width="18" height="19"/>
+        <image name="notch" width="160" height="21"/>
         <image name="topleft" width="13" height="13"/>
         <image name="topright" width="13" height="13"/>
     </resources>

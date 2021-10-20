@@ -16,6 +16,7 @@ class NotchViewController: NSViewController {
     var mouseTracking: NSTrackingArea?
     
     let cameraToggledNotification = Notification.Name("cameraToggled")
+    let bigNotchToggledNotification = Notification.Name("bigNotchToggled")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +24,16 @@ class NotchViewController: NSViewController {
     
     override func viewDidAppear() {
         super.viewDidAppear()
-        startMouseTracking()
         
         updateCamera()
-        
         NotificationCenter.default.addObserver(forName: cameraToggledNotification, object: nil, queue: nil) { _ in
             self.updateCamera()
         }
+        
+        updateNotchImage()
+        NotificationCenter.default.addObserver(forName: bigNotchToggledNotification, object: nil, queue: nil, using: { _ in
+            self.updateNotchImage()
+        })
     }
     
     func updateCamera() {
@@ -37,6 +41,15 @@ class NotchViewController: NSViewController {
         let isBuildin = CGDisplayIsBuiltin(screenNumber.uint32Value)
         
         cameraImage.isHidden = !isCameraEnabled || (isBuildin != 0 && isCameraExternalOnly)
+    }
+    
+    func updateNotchImage() {
+        centerImage.image = isShowBigNotch ? NSImage(named: "bigNotch") : NSImage(named: "notch")
+        cameraImage.image = isShowBigNotch ? NSImage(named: "bigCamera") : NSImage(named: "camera")
+        
+        DispatchQueue.main.async {
+            self.startMouseTracking()
+        }
     }
     
     override func mouseEntered(with event: NSEvent) {
@@ -50,6 +63,9 @@ class NotchViewController: NSViewController {
     }
     
     func startMouseTracking(options: NSTrackingArea.Options = [.activeAlways, .mouseEnteredAndExited]) {
+        for item in view.trackingAreas {
+            view.removeTrackingArea(item)
+        }
         let tracking = NSTrackingArea(rect: centerImage.frame, options: options, owner: self, userInfo: nil)
         view.addTrackingArea(tracking)
         mouseTracking = tracking
@@ -91,6 +107,13 @@ extension NotchViewController {
         
         moreMenu.addItem(NSMenuItem.separator())
         
+        let showBigNotchItem = NSMenuItem(title: "Bigger than Bigger", action: #selector(showBigNotch), keyEquivalent: "")
+        showBigNotchItem.state = isShowBigNotch ? .on : .off
+        showBigNotchItem.target = self
+        moreMenu.addItem(showBigNotchItem)
+        
+        moreMenu.addItem(NSMenuItem.separator())
+        
         let myAppsItem = NSMenuItem(title: "My other apps", action: #selector(showApps), keyEquivalent: "")
         myAppsItem.target = self
         moreMenu.addItem(myAppsItem)
@@ -114,6 +137,11 @@ extension NotchViewController {
     @objc func cameraExternalOnly() {
         isCameraExternalOnly.toggle()
         NotificationCenter.default.post(name: cameraToggledNotification, object: nil)
+    }
+    
+    @objc func showBigNotch() {
+        isShowBigNotch.toggle()
+        NotificationCenter.default.post(name: bigNotchToggledNotification, object: nil)
     }
     
     @objc func showApps() {

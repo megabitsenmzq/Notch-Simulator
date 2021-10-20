@@ -20,6 +20,11 @@ class MyAppsViewController: NSViewController {
     @IBAction func openMagicShareLink(_ sender: Any) {
         NSWorkspace.shared.open(URL(string: "https://apps.apple.com/us/app/id1438149621")!)
     }
+    
+    @IBAction func openMDClockLink(_ sender: Any) {
+        NSWorkspace.shared.open(URL(string: "https://apps.apple.com/app/apple-store/id1536358464?pt=119361776&ct=megbits&mt=8")!)
+    }
+    
     @IBAction func close(_ sender: Any) {
         view.window?.close()
     }

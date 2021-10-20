@@ -16,6 +16,9 @@ var isCameraEnabled = UserDefaults.standard.bool(forKey: "pref.isCameraEnabled")
 var isCameraExternalOnly = UserDefaults.standard.bool(forKey: "pref.isCameraExternalOnly") {
     didSet { UserDefaults.standard.setValue(isCameraExternalOnly, forKey: "pref.isCameraExternalOnly") }}
 
+var isShowBigNotch = UserDefaults.standard.bool(forKey: "pref.isShowBigNotch") {
+    didSet { UserDefaults.standard.setValue(isShowBigNotch, forKey: "pref.isShowBigNotch") }}
+
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
@@ -34,9 +37,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(resetWindow), name: NSApplication.didChangeScreenParametersNotification, object: nil)
         
-        if !UserDefaults.standard.bool(forKey: "viewMyApps") {
+        if !UserDefaults.standard.bool(forKey: "showMyApps") {
             setupMyAppWindow()
-            UserDefaults.standard.set(true, forKey: "viewMyApps")
+            UserDefaults.standard.set(true, forKey: "showMyApps")
         }
         
     }
@@ -55,8 +58,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             NSApplication.shared.terminate(self)
         }
         
-        let menubarHeight = NSApplication.shared.mainMenu!.menuBarHeight
-        
         for i in 0..<screens.count {
             let notchWindow = NotchWindow()
             notchWindow.targetScreen = screens[i]
@@ -69,7 +70,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             notchWindow.contentViewController = NotchViewController(nibName: "NotchViewController", bundle: nil)
             
             let screenFrame = screens[i].frame
-            notchWindow.setFrame(NSRect(x: screenFrame.origin.x, y: screenFrame.origin.y + screenFrame.size.height - menubarHeight, width: screenFrame.size.width, height: menubarHeight), display: true)
+            notchWindow.setFrame(NSRect(x: screenFrame.origin.x, y: screenFrame.origin.y + screenFrame.size.height - 100, width: screenFrame.size.width, height: 100), display: true)
             
             let notchWindowController = NSWindowController()
             notchWindowController.contentViewController = notchWindow.contentViewController

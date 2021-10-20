@@ -1,15 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "bigNotch@3x-1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "qr.png",
+      "filename" : "bigNotch@6x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "bigNotch@9x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
