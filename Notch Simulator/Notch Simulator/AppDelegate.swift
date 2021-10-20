@@ -7,6 +7,12 @@
 
 import Cocoa
 
+var isRunAtLoginEnabled = UserDefaults.standard.bool(forKey: "pref.RunAtLogin") {
+    didSet { UserDefaults.standard.setValue(isRunAtLoginEnabled, forKey: "pref.RunAtLogin") }}
+
+var isCameraEnabled = UserDefaults.standard.bool(forKey: "pref.isCameraEnabled") {
+    didSet { UserDefaults.standard.setValue(isCameraEnabled, forKey: "pref.isCameraEnabled") }}
+
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
@@ -18,7 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let myAppsWindow = NSWindow()
     let myAppsWindowController = NSWindowController()
     let myAppsViewController = MyAppsViewController(nibName: "MyAppsViewController", bundle: nil)
-
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         setupWindow()
@@ -55,7 +61,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             notchWindow.backingType = .buffered
             notchWindow.backgroundColor = .clear
             notchWindow.hasShadow = false
-            notchWindow.level = .screenSaver
+            notchWindow.level = .statusBar
             notchWindow.collectionBehavior =  [.canJoinAllSpaces, .fullScreenNone]
             notchWindow.contentViewController = NotchViewController(nibName: "NotchViewController", bundle: nil)
             

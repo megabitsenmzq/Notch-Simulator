@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19162" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19162"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NotchViewController" customModule="Notch_Simulator" customModuleProvider="target">
             <connections>
+                <outlet property="buttonView" destination="C66-PT-WNf" id="LZs-lT-zbf"/>
+                <outlet property="cameraImage" destination="TmC-Le-APu" id="fZm-sz-4xI"/>
                 <outlet property="centerImage" destination="RqM-z2-cpO" id="SXu-W1-HEU"/>
-                <outlet property="quitButton" destination="7sh-Ob-MI3" id="Mde-or-wkh"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -19,45 +20,75 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RqM-z2-cpO">
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RqM-z2-cpO" userLabel="center">
                     <rect key="frame" x="161" y="251" width="158" height="21"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="notch" id="gWi-md-2cf"/>
                 </imageView>
-                <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7sh-Ob-MI3">
-                    <rect key="frame" x="169" y="254" width="142" height="16"/>
-                    <buttonCell key="cell" type="bevel" title="Quit" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="ju6-OK-2f9">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <color key="contentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <connections>
-                        <action selector="quit:" target="-2" id="Q1u-pk-SKt"/>
-                    </connections>
-                </button>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R3M-u6-Te1">
+                <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TmC-Le-APu" userLabel="camera">
+                    <rect key="frame" x="232" y="256" width="16" height="16"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="camera" id="dan-ov-1OZ"/>
+                </imageView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R3M-u6-Te1" userLabel="right">
                     <rect key="frame" x="467" y="259" width="13" height="13"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="topright" id="9oK-C9-T2A"/>
                 </imageView>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rgc-nJ-Hqo">
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rgc-nJ-Hqo" userLabel="left">
                     <rect key="frame" x="0.0" y="259" width="13" height="13"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="topleft" id="Jvz-J8-aqe"/>
                 </imageView>
+                <stackView hidden="YES" distribution="fill" orientation="horizontal" alignment="top" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C66-PT-WNf">
+                    <rect key="frame" x="210" y="252" width="60" height="19"/>
+                    <subviews>
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="Z0x-LA-GDh" userLabel="close">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="19"/>
+                            <buttonCell key="cell" type="square" title="    " bezelStyle="shadowlessSquare" image="close" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="CwH-Qx-33h">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="quit:" target="-2" id="Mtk-K1-oe8"/>
+                            </connections>
+                        </button>
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="ybX-RA-o0H" userLabel="more">
+                            <rect key="frame" x="40" y="0.0" width="20" height="19"/>
+                            <buttonCell key="cell" type="square" title="    " bezelStyle="shadowlessSquare" image="menu" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="3qo-SW-G4Z">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="showMoreMenu:" target="-2" id="KQy-3u-Lys"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
             </subviews>
             <constraints>
-                <constraint firstItem="7sh-Ob-MI3" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="JEF-Io-Wyj"/>
+                <constraint firstItem="TmC-Le-APu" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="0x8-4G-z2r"/>
+                <constraint firstItem="C66-PT-WNf" firstAttribute="centerY" secondItem="RqM-z2-cpO" secondAttribute="centerY" id="1yX-r6-ZzX"/>
+                <constraint firstItem="TmC-Le-APu" firstAttribute="centerX" secondItem="RqM-z2-cpO" secondAttribute="centerX" id="DZr-3d-zGj"/>
                 <constraint firstItem="R3M-u6-Te1" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Li9-Pc-Kgj"/>
                 <constraint firstAttribute="trailing" secondItem="R3M-u6-Te1" secondAttribute="trailing" id="Mds-3d-jX1"/>
-                <constraint firstItem="7sh-Ob-MI3" firstAttribute="centerY" secondItem="RqM-z2-cpO" secondAttribute="centerY" id="WgK-nU-TGa"/>
                 <constraint firstItem="Rgc-nJ-Hqo" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="XUi-Wi-va5"/>
+                <constraint firstItem="C66-PT-WNf" firstAttribute="centerX" secondItem="RqM-z2-cpO" secondAttribute="centerX" id="fJ3-FS-Twk"/>
                 <constraint firstItem="Rgc-nJ-Hqo" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="iWp-rF-x3X"/>
                 <constraint firstItem="RqM-z2-cpO" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="imP-j9-J3D"/>
-                <constraint firstItem="7sh-Ob-MI3" firstAttribute="width" secondItem="RqM-z2-cpO" secondAttribute="width" multiplier="0.9" id="j7p-yK-Kcv"/>
                 <constraint firstItem="RqM-z2-cpO" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="rR6-ZO-Wou"/>
             </constraints>
             <point key="canvasLocation" x="140" y="154"/>
         </customView>
     </objects>
     <resources>
+        <image name="camera" width="16" height="16"/>
+        <image name="close" width="18" height="19"/>
+        <image name="menu" width="18" height="19"/>
         <image name="notch" width="158" height="21"/>
         <image name="topleft" width="13" height="13"/>
         <image name="topright" width="13" height="13"/>

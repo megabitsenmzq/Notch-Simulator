@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C02ECAC7271FFB06002E33D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C02ECAC6271FFB06002E33D1 /* main.m */; };
+		C02ECAD127201EEF002E33D1 /* Notch Simulator Helper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = C02ECABC271FFAFA002E33D1 /* Notch Simulator Helper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C05C0B79271E59D6007BDF89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05C0B78271E59D6007BDF89 /* AppDelegate.swift */; };
 		C05C0B7B271E59DA007BDF89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C05C0B7A271E59DA007BDF89 /* Assets.xcassets */; };
 		C05C0B7E271E59DA007BDF89 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05C0B7C271E59DA007BDF89 /* MainMenu.xib */; };
@@ -17,7 +19,24 @@
 		C05C0B93271F03DA007BDF89 /* NotchWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05C0B92271F03DA007BDF89 /* NotchWindow.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C02ECAD027201EE2002E33D1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				C02ECAD127201EEF002E33D1 /* Notch Simulator Helper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C02ECABC271FFAFA002E33D1 /* Notch Simulator Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Notch Simulator Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C02ECAC6271FFB06002E33D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C02ECAC8271FFB06002E33D1 /* Notch_Simulator_Helper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Notch_Simulator_Helper.entitlements; sourceTree = "<group>"; };
+		C02ECACC271FFB9D002E33D1 /* Notch-Simulator-Helper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Notch-Simulator-Helper-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C05C0B75271E59D6007BDF89 /* Notch Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Notch Simulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C05C0B78271E59D6007BDF89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C05C0B7A271E59DA007BDF89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,6 +51,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C02ECAB9271FFAFA002E33D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C05C0B72271E59D6007BDF89 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -42,10 +68,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C02ECABD271FFAFB002E33D1 /* Notch Simulator Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C02ECACC271FFB9D002E33D1 /* Notch-Simulator-Helper-Info.plist */,
+				C02ECAC6271FFB06002E33D1 /* main.m */,
+				C02ECAC8271FFB06002E33D1 /* Notch_Simulator_Helper.entitlements */,
+			);
+			path = "Notch Simulator Helper";
+			sourceTree = "<group>";
+		};
 		C05C0B6C271E59D6007BDF89 = {
 			isa = PBXGroup;
 			children = (
 				C05C0B77271E59D6007BDF89 /* Notch Simulator */,
+				C02ECABD271FFAFB002E33D1 /* Notch Simulator Helper */,
 				C05C0B76271E59D6007BDF89 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				C05C0B75271E59D6007BDF89 /* Notch Simulator.app */,
+				C02ECABC271FFAFA002E33D1 /* Notch Simulator Helper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +116,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C02ECABB271FFAFA002E33D1 /* Notch Simulator Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C02ECAC9271FFB06002E33D1 /* Build configuration list for PBXNativeTarget "Notch Simulator Helper" */;
+			buildPhases = (
+				C02ECAB8271FFAFA002E33D1 /* Sources */,
+				C02ECAB9271FFAFA002E33D1 /* Frameworks */,
+				C02ECABA271FFAFA002E33D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Notch Simulator Helper";
+			productName = "Notch Simulator Helper";
+			productReference = C02ECABC271FFAFA002E33D1 /* Notch Simulator Helper.app */;
+			productType = "com.apple.product-type.application";
+		};
 		C05C0B74271E59D6007BDF89 /* Notch Simulator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C05C0B82271E59DA007BDF89 /* Build configuration list for PBXNativeTarget "Notch Simulator" */;
@@ -85,6 +140,7 @@
 				C05C0B71271E59D6007BDF89 /* Sources */,
 				C05C0B72271E59D6007BDF89 /* Frameworks */,
 				C05C0B73271E59D6007BDF89 /* Resources */,
+				C02ECAD027201EE2002E33D1 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -103,8 +159,11 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					C02ECABB271FFAFA002E33D1 = {
+						CreatedOnToolsVersion = 13.1;
+					};
 					C05C0B74271E59D6007BDF89 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -124,11 +183,19 @@
 			projectRoot = "";
 			targets = (
 				C05C0B74271E59D6007BDF89 /* Notch Simulator */,
+				C02ECABB271FFAFA002E33D1 /* Notch Simulator Helper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C02ECABA271FFAFA002E33D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C05C0B73271E59D6007BDF89 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,6 +210,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C02ECAB8271FFAFA002E33D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C02ECAC7271FFB06002E33D1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C05C0B71271E59D6007BDF89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,6 +243,66 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C02ECACA271FFB06002E33D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Notch Simulator Helper/Notch_Simulator_Helper.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QJN4A73F8D;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Notch-Simulator-Helper-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JinyuMeng.Notch-Simulator-Helper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		C02ECACB271FFB06002E33D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Notch Simulator Helper/Notch_Simulator_Helper.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QJN4A73F8D;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Notch-Simulator-Helper-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JinyuMeng.Notch-Simulator-Helper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
 		C05C0B80271E59DA007BDF89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -289,9 +424,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Notch Simulator/Notch_Simulator.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = QJN4A73F8D;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -305,9 +441,10 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JinyuMeng.Notch-Simulator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -319,9 +456,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Notch Simulator/Notch_Simulator.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = QJN4A73F8D;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -335,9 +473,10 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JinyuMeng.Notch-Simulator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -346,6 +485,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C02ECAC9271FFB06002E33D1 /* Build configuration list for PBXNativeTarget "Notch Simulator Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C02ECACA271FFB06002E33D1 /* Debug */,
+				C02ECACB271FFB06002E33D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C05C0B70271E59D6007BDF89 /* Build configuration list for PBXProject "Notch Simulator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
