@@ -13,6 +13,9 @@ var isRunAtLoginEnabled = UserDefaults.standard.bool(forKey: "pref.RunAtLogin") 
 var isCameraEnabled = UserDefaults.standard.bool(forKey: "pref.isCameraEnabled") {
     didSet { UserDefaults.standard.setValue(isCameraEnabled, forKey: "pref.isCameraEnabled") }}
 
+var isCameraExternalOnly = UserDefaults.standard.bool(forKey: "pref.isCameraExternalOnly") {
+    didSet { UserDefaults.standard.setValue(isCameraExternalOnly, forKey: "pref.isCameraExternalOnly") }}
+
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 

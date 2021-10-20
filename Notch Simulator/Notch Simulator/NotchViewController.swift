@@ -25,11 +25,18 @@ class NotchViewController: NSViewController {
         super.viewDidAppear()
         startMouseTracking()
         
-        cameraImage.isHidden = !isCameraEnabled
+        updateCamera()
         
         NotificationCenter.default.addObserver(forName: cameraToggledNotification, object: nil, queue: nil) { _ in
-            self.cameraImage.isHidden = !isCameraEnabled
+            self.updateCamera()
         }
+    }
+    
+    func updateCamera() {
+        guard let screenNumber = view.window?.screen?.deviceDescription[NSDeviceDescriptionKey(rawValue: "NSScreenNumber")] as? NSNumber else { return }
+        let isBuildin = CGDisplayIsBuiltin(screenNumber.uint32Value)
+        
+        cameraImage.isHidden = !isCameraEnabled || (isBuildin != 0 && isCameraExternalOnly)
     }
     
     override func mouseEntered(with event: NSEvent) {
@@ -77,6 +84,17 @@ extension NotchViewController {
         showCameraItem.target = self
         moreMenu.addItem(showCameraItem)
         
+        let externalOnlyItem = NSMenuItem(title: "Camera for external only", action: #selector(cameraExternalOnly), keyEquivalent: "")
+        externalOnlyItem.state = isCameraExternalOnly ? .on : .off
+        externalOnlyItem.target = self
+        moreMenu.addItem(externalOnlyItem)
+        
+        moreMenu.addItem(NSMenuItem.separator())
+        
+        let myAppsItem = NSMenuItem(title: "My other apps", action: #selector(showApps), keyEquivalent: "")
+        myAppsItem.target = self
+        moreMenu.addItem(myAppsItem)
+        
         return moreMenu
     }
     
@@ -89,8 +107,19 @@ extension NotchViewController {
     }
     
     @objc func showCamera() {
-        isCameraEnabled = !isCameraEnabled
+        isCameraEnabled.toggle()
         NotificationCenter.default.post(name: cameraToggledNotification, object: nil)
+    }
+    
+    @objc func cameraExternalOnly() {
+        isCameraExternalOnly.toggle()
+        NotificationCenter.default.post(name: cameraToggledNotification, object: nil)
+    }
+    
+    @objc func showApps() {
+        if let delegate = NSApplication.shared.delegate as? AppDelegate {
+            delegate.setupMyAppWindow()
+        }
     }
     
 }
