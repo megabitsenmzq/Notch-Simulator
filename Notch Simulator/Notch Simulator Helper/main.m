@@ -26,7 +26,7 @@ int main(int argc, const char * argv[]) {
         NSString *path = [NSString pathWithComponents:pathComponents];
         [[NSWorkspace sharedWorkspace] launchApplication:path];
     }
-    [NSApp terminate:nil];
+    
     return NSApplicationMain(argc, argv);
 }
 
