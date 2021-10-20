@@ -13,7 +13,7 @@ Pretend you have the latest MacBook Pro! [Download](https://github.com/megabitse
 
 - Fake camera support.
 - Work on all screens.
-- Huge notch option.
+- Huge notch option. (5x bigger! 5x rich!)
 - Hover to reveal the quit button.
 - That's it!
 
