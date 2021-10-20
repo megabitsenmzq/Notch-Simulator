@@ -7,6 +7,10 @@ Pretend you have the latest MacBook Pro! [Download](https://github.com/megabitse
 
 ![Icon](Icon.png)
 
+![Preview](preiew.png)
+
+- Fake camera support.
+- Work on all screens.
 - Hover to reveal the quit button.
 - That's it!
 
