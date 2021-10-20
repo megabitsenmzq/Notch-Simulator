@@ -7,6 +7,8 @@ Pretend you have the latest MacBook Pro! [Download](https://github.com/megabitse
 
 ![Icon](Icon.png)
 
+<a href="https://www.producthunt.com/posts/notch-simulator?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-notch-simulator" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=316518&theme=light" alt="Notch Simulator - Pretend you have the latest MacBook Pro | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
 ## Preview
 
 ![Preview](NotchPreiew.png)
