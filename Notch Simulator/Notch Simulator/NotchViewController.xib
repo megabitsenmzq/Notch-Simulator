@@ -73,7 +73,7 @@
                     </customSpacing>
                 </stackView>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HMq-b7-Ycd" userLabel="light">
-                    <rect key="frame" x="254" y="262" width="4" height="5"/>
+                    <rect key="frame" x="256" y="262" width="4" height="5"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="cameraLight" id="fnX-hc-7Ya"/>
                 </imageView>
             </subviews>
@@ -83,7 +83,7 @@
                 <constraint firstItem="TmC-Le-APu" firstAttribute="centerX" secondItem="RqM-z2-cpO" secondAttribute="centerX" id="DZr-3d-zGj"/>
                 <constraint firstItem="R3M-u6-Te1" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Li9-Pc-Kgj"/>
                 <constraint firstAttribute="trailing" secondItem="R3M-u6-Te1" secondAttribute="trailing" id="Mds-3d-jX1"/>
-                <constraint firstItem="HMq-b7-Ycd" firstAttribute="leading" secondItem="TmC-Le-APu" secondAttribute="trailing" constant="6" id="V6O-eb-Nts"/>
+                <constraint firstItem="HMq-b7-Ycd" firstAttribute="leading" secondItem="TmC-Le-APu" secondAttribute="trailing" constant="8" id="V6O-eb-Nts"/>
                 <constraint firstItem="Rgc-nJ-Hqo" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="XUi-Wi-va5"/>
                 <constraint firstItem="C66-PT-WNf" firstAttribute="centerX" secondItem="RqM-z2-cpO" secondAttribute="centerX" id="fJ3-FS-Twk"/>
                 <constraint firstItem="Rgc-nJ-Hqo" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="iWp-rF-x3X"/>
