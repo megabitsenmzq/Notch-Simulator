@@ -7,6 +7,7 @@ Pretend you have the latest MacBook Pro! [Download](https://github.com/megabitse
 
 Thank you, everyone! Notch Simulator has been downloaded over 2000 times! 🎉
 
+Twitter：[@Megabits](https://twitter.com/Megabits_mzq)
 
 ### Special thanks to: 
 - 🎉 [@hzlzh](https://twitter.com/hzlzh) for helping me to create the UI elements. 🎉
@@ -33,10 +34,6 @@ Thank you, everyone! Notch Simulator has been downloaded over 2000 times! 🎉
 
 If you have encountered permission problems while trying to run the app, you can use this tool to solve it: 
 [Permissions Reset](https://ohanaware.com/permissionsreset/)
-
-## About Me
-
-Twitter：[@Megabits](https://twitter.com/Megabits_mzq)
 
 ### My Apps
 
