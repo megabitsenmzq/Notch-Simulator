@@ -111,7 +111,9 @@ extension NotchViewController {
         
         let showTapeItem = NSMenuItem(title: "Put tape on it!", action: #selector(showTape), keyEquivalent: "")
         showTapeItem.state = isTapeOn ? .on : .off
-        showTapeItem.target = self
+        if isCameraEnabled {
+            showTapeItem.target = self
+        }
         moreMenu.addItem(showTapeItem)
         
         let turnOnCameraItem = NSMenuItem(title: "Turn on the camera", action: #selector(turnOnCamera), keyEquivalent: "")
