@@ -134,6 +134,10 @@ extension NotchViewController {
         
         moreMenu.addItem(NSMenuItem.separator())
         
+        let githubItem = NSMenuItem(title: "GitHub Page", action: #selector(github), keyEquivalent: "")
+        githubItem.target = self
+        moreMenu.addItem(githubItem)
+        
         let myAppsItem = NSMenuItem(title: "My other apps", action: #selector(showApps), keyEquivalent: "")
         myAppsItem.target = self
         moreMenu.addItem(myAppsItem)
@@ -184,6 +188,10 @@ extension NotchViewController {
     @objc func showBigNotch() {
         isShowBigNotch.toggle()
         NotificationCenter.default.post(name: bigNotchToggledNotification, object: nil)
+    }
+    
+    @objc func github() {
+        NSWorkspace.shared.open(URL(string: "https://github.com/megabitsenmzq/Notch-Simulator")!)
     }
     
     @objc func showApps() {
