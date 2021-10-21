@@ -40,10 +40,10 @@ Twitter：[@Megabits](https://twitter.com/Megabits_mzq)
 
 ### My Apps
 
-TomoNow 2 (A focus timer feels different.): [App Store](https://apps.apple.com/us/app/id1505296579)
+- TomoNow 2 (A focus timer feels different.): [App Store](https://apps.apple.com/us/app/id1505296579)
 
-Magic Share (The easy way to share links.): [App Store](https://apps.apple.com/us/app/id1438149621)
+- Magic Share (The easy way to share links.): [App Store](https://apps.apple.com/us/app/id1438149621)
 
-PipMemo (Show any image within PIP.): [App Store](https://apps.apple.com/us/app/pipmemo/id1529735620)
+- PipMemo (Show any image within PIP.): [App Store](https://apps.apple.com/us/app/pipmemo/id1529735620)
 
-下雨吗？（耿直的降雨预报。）: [App Store](https://apps.apple.com/cn/app/下雨吗/id1537380441)
+- 下雨吗？（耿直的降雨预报。）: [App Store](https://apps.apple.com/cn/app/下雨吗/id1537380441)
