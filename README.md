@@ -17,7 +17,7 @@ Special thanks to: 🎉 [Miidii 谜底科技](https://miidii.app) 🎉
 
 ![Preview](NewNotchPreiew.png)
 
-![Preview](NewNotchPreiew2.png)
+![Preview](NewNotchPreiew1.png)
 
 - Fake camera support.
 - Put tape on the cameras.
