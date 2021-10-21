@@ -77,7 +77,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             notchWindow.backgroundColor = .clear
             notchWindow.hasShadow = false
             notchWindow.level = .screenSaver
-            notchWindow.collectionBehavior =  [.canJoinAllSpaces, .fullScreenNone]
+            notchWindow.collectionBehavior =  [.canJoinAllSpaces, .fullScreenNone, .stationary]
             notchWindow.contentViewController = NotchViewController(nibName: "NotchViewController", bundle: nil)
             
             let screenFrame = screens[i].frame
