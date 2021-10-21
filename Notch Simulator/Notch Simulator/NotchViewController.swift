@@ -12,6 +12,7 @@ class NotchViewController: NSViewController {
     
     @IBOutlet weak var centerImage: NSImageView!
     @IBOutlet weak var cameraImage: NSImageView!
+    @IBOutlet weak var lightImage: NSImageView!
     @IBOutlet weak var buttonView: NSStackView!
     var mouseTracking: NSTrackingArea?
     
@@ -41,11 +42,13 @@ class NotchViewController: NSViewController {
         let isBuildin = CGDisplayIsBuiltin(screenNumber.uint32Value)
         
         cameraImage.isHidden = !isCameraEnabled || (isBuildin != 0 && isCameraExternalOnly)
+        lightImage.isHidden = !isCameraEnabled || !isCameraOn || (isBuildin != 0 && isCameraExternalOnly)
     }
     
     func updateNotchImage() {
         centerImage.image = isShowBigNotch ? NSImage(named: "bigNotch") : NSImage(named: "notch")
         cameraImage.image = isShowBigNotch ? NSImage(named: "bigCamera") : NSImage(named: "camera")
+        lightImage.image = isShowBigNotch ? NSImage(named: "bigCameraLight") : NSImage(named: "cameraLight")
         
         DispatchQueue.main.async {
             self.startMouseTracking()
@@ -95,17 +98,34 @@ extension NotchViewController {
         runAtLoginItem.target = self
         moreMenu.addItem(runAtLoginItem)
         
+        moreMenu.addItem(NSMenuItem.separator())
+        
         let showCameraItem = NSMenuItem(title: "Show camera", action: #selector(showCamera), keyEquivalent: "")
         showCameraItem.state = isCameraEnabled ? .on : .off
         showCameraItem.target = self
         moreMenu.addItem(showCameraItem)
         
+        let turnOnCameraItem = NSMenuItem(title: "Turn on the camera", action: #selector(turnOnCamera), keyEquivalent: "")
+        turnOnCameraItem.state = isCameraOn ? .on : .off
+        turnOnCameraItem.isEnabled = isCameraEnabled
+        if isCameraEnabled {
+            turnOnCameraItem.target = self
+        }
+        moreMenu.addItem(turnOnCameraItem)
+        
         let externalOnlyItem = NSMenuItem(title: "Camera for external only", action: #selector(cameraExternalOnly), keyEquivalent: "")
         externalOnlyItem.state = isCameraExternalOnly ? .on : .off
-        externalOnlyItem.target = self
+        if isCameraEnabled {
+            externalOnlyItem.target = self
+        }
         moreMenu.addItem(externalOnlyItem)
         
         moreMenu.addItem(NSMenuItem.separator())
+        
+        let notchInternalOnlyItem = NSMenuItem(title: "Notch for internal only", action: #selector(notchInternalOnly), keyEquivalent: "")
+        notchInternalOnlyItem.state = isNotchInternalOnly ? .on : .off
+        notchInternalOnlyItem.target = self
+        moreMenu.addItem(notchInternalOnlyItem)
         
         let showBigNotchItem = NSMenuItem(title: "Bigger than Bigger", action: #selector(showBigNotch), keyEquivalent: "")
         showBigNotchItem.state = isShowBigNotch ? .on : .off
@@ -134,9 +154,31 @@ extension NotchViewController {
         NotificationCenter.default.post(name: cameraToggledNotification, object: nil)
     }
     
+    @objc func turnOnCamera() {
+        isCameraOn.toggle()
+        NotificationCenter.default.post(name: cameraToggledNotification, object: nil)
+    }
+    
     @objc func cameraExternalOnly() {
         isCameraExternalOnly.toggle()
+        if isCameraExternalOnly {
+            isNotchInternalOnly = false
+            if let delegate = NSApplication.shared.delegate as? AppDelegate {
+                delegate.resetWindow()
+            }
+        }
         NotificationCenter.default.post(name: cameraToggledNotification, object: nil)
+    }
+    
+    @objc func notchInternalOnly() {
+        isNotchInternalOnly.toggle()
+        if isNotchInternalOnly {
+            isCameraExternalOnly = false
+            NotificationCenter.default.post(name: cameraToggledNotification, object: nil)
+        }
+        if let delegate = NSApplication.shared.delegate as? AppDelegate {
+            delegate.resetWindow()
+        }
     }
     
     @objc func showBigNotch() {

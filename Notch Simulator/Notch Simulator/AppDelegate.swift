@@ -13,8 +13,14 @@ var isRunAtLoginEnabled = UserDefaults.standard.bool(forKey: "pref.RunAtLogin") 
 var isCameraEnabled = UserDefaults.standard.bool(forKey: "pref.isCameraEnabled") {
     didSet { UserDefaults.standard.setValue(isCameraEnabled, forKey: "pref.isCameraEnabled") }}
 
+var isCameraOn = UserDefaults.standard.bool(forKey: "pref.isCameraOn") {
+    didSet { UserDefaults.standard.setValue(isCameraOn, forKey: "pref.isCameraOn") }}
+
 var isCameraExternalOnly = UserDefaults.standard.bool(forKey: "pref.isCameraExternalOnly") {
     didSet { UserDefaults.standard.setValue(isCameraExternalOnly, forKey: "pref.isCameraExternalOnly") }}
+
+var isNotchInternalOnly = UserDefaults.standard.bool(forKey: "pref.isNotchInternalOnly") {
+    didSet { UserDefaults.standard.setValue(isNotchInternalOnly, forKey: "pref.isNotchInternalOnly") }}
 
 var isShowBigNotch = UserDefaults.standard.bool(forKey: "pref.isShowBigNotch") {
     didSet { UserDefaults.standard.setValue(isShowBigNotch, forKey: "pref.isShowBigNotch") }}
@@ -59,6 +65,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         for i in 0..<screens.count {
+            
+            guard let screenNumber = screens[i].deviceDescription[NSDeviceDescriptionKey(rawValue: "NSScreenNumber")] as? NSNumber else { return }
+            let isBuildin = CGDisplayIsBuiltin(screenNumber.uint32Value)
+            
+            if (isBuildin == 0) && isNotchInternalOnly { continue }
+            
             let notchWindow = NotchWindow()
             notchWindow.targetScreen = screens[i]
             notchWindow.styleMask = .borderless

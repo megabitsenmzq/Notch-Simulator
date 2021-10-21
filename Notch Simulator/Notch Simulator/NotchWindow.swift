@@ -2,7 +2,7 @@
 //  NotchWindow.swift
 //  Notch Simulator
 //
-//  Created by 孟金羽 on 2021/10/19.
+//  Created by Jinyu Meng on 2021/10/19.
 //
 
 import Cocoa
