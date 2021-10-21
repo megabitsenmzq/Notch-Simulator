@@ -17,6 +17,7 @@
 		C05C0B90271E861F007BDF89 /* MyAppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05C0B8E271E861F007BDF89 /* MyAppsViewController.swift */; };
 		C05C0B91271E861F007BDF89 /* MyAppsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05C0B8F271E861F007BDF89 /* MyAppsViewController.xib */; };
 		C05C0B93271F03DA007BDF89 /* NotchWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05C0B92271F03DA007BDF89 /* NotchWindow.swift */; };
+		EDA567CF2721D373008B4C41 /* NSScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA567CE2721D373008B4C41 /* NSScreen+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,7 @@
 		C05C0B8E271E861F007BDF89 /* MyAppsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppsViewController.swift; sourceTree = "<group>"; };
 		C05C0B8F271E861F007BDF89 /* MyAppsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAppsViewController.xib; sourceTree = "<group>"; };
 		C05C0B92271F03DA007BDF89 /* NotchWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchWindow.swift; sourceTree = "<group>"; };
+		EDA567CE2721D373008B4C41 /* NSScreen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSScreen+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				C05C0B92271F03DA007BDF89 /* NotchWindow.swift */,
 				C05C0B8F271E861F007BDF89 /* MyAppsViewController.xib */,
 				C05C0B8E271E861F007BDF89 /* MyAppsViewController.swift */,
+				EDA567CE2721D373008B4C41 /* NSScreen+Extensions.swift */,
 				C05C0B7C271E59DA007BDF89 /* MainMenu.xib */,
 				C05C0B7F271E59DA007BDF89 /* Notch_Simulator.entitlements */,
 				C05C0B8D271E6783007BDF89 /* Notch-Simulator-Info.plist */,
@@ -224,6 +227,7 @@
 			files = (
 				C05C0B93271F03DA007BDF89 /* NotchWindow.swift in Sources */,
 				C05C0B90271E861F007BDF89 /* MyAppsViewController.swift in Sources */,
+				EDA567CF2721D373008B4C41 /* NSScreen+Extensions.swift in Sources */,
 				C05C0B79271E59D6007BDF89 /* AppDelegate.swift in Sources */,
 				C05C0B89271E5D5C007BDF89 /* NotchViewController.swift in Sources */,
 			);
