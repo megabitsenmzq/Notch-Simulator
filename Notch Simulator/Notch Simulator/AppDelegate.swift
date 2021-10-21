@@ -16,6 +16,9 @@ var isCameraEnabled = UserDefaults.standard.bool(forKey: "pref.isCameraEnabled")
 var isCameraOn = UserDefaults.standard.bool(forKey: "pref.isCameraOn") {
     didSet { UserDefaults.standard.setValue(isCameraOn, forKey: "pref.isCameraOn") }}
 
+var isTapeOn = UserDefaults.standard.bool(forKey: "pref.isTapeOn") {
+    didSet { UserDefaults.standard.setValue(isTapeOn, forKey: "pref.isTapeOn") }}
+
 var isCameraExternalOnly = UserDefaults.standard.bool(forKey: "pref.isCameraExternalOnly") {
     didSet { UserDefaults.standard.setValue(isCameraExternalOnly, forKey: "pref.isCameraExternalOnly") }}
 
@@ -77,7 +80,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             notchWindow.backingType = .buffered
             notchWindow.backgroundColor = .clear
             notchWindow.hasShadow = false
-            notchWindow.level = .statusBar
+            notchWindow.level = .screenSaver
             notchWindow.collectionBehavior =  [.canJoinAllSpaces, .fullScreenNone]
             notchWindow.contentViewController = NotchViewController(nibName: "NotchViewController", bundle: nil)
             

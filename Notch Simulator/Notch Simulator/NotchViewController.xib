@@ -12,6 +12,7 @@
                 <outlet property="cameraImage" destination="TmC-Le-APu" id="fZm-sz-4xI"/>
                 <outlet property="centerImage" destination="RqM-z2-cpO" id="SXu-W1-HEU"/>
                 <outlet property="lightImage" destination="HMq-b7-Ycd" id="1of-ZL-8ef"/>
+                <outlet property="tapeImage" destination="2Wq-i2-Lgz" id="Po2-Yt-lxQ"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -29,6 +30,10 @@
                     <rect key="frame" x="232" y="256" width="16" height="16"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="camera" id="dan-ov-1OZ"/>
                 </imageView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Wq-i2-Lgz" userLabel="tape">
+                    <rect key="frame" x="214" y="255" width="52" height="16"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="tape" id="7kj-fr-VPw"/>
+                </imageView>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R3M-u6-Te1" userLabel="right">
                     <rect key="frame" x="467" y="259" width="13" height="13"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="topright" id="9oK-C9-T2A"/>
@@ -38,11 +43,11 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="topleft" id="Jvz-J8-aqe"/>
                 </imageView>
                 <stackView hidden="YES" distribution="fill" orientation="horizontal" alignment="top" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C66-PT-WNf">
-                    <rect key="frame" x="198" y="252" width="85" height="19"/>
+                    <rect key="frame" x="203" y="252" width="75" height="19"/>
                     <subviews>
                         <button translatesAutoresizingMaskIntoConstraints="NO" id="Z0x-LA-GDh" userLabel="close">
-                            <rect key="frame" x="0.0" y="0.0" width="35" height="19"/>
-                            <buttonCell key="cell" type="square" title="-     -" bezelStyle="shadowlessSquare" image="close" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="CwH-Qx-33h">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="19"/>
+                            <buttonCell key="cell" type="square" title=".     ." bezelStyle="shadowlessSquare" image="close" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="CwH-Qx-33h">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
@@ -52,8 +57,8 @@
                             </connections>
                         </button>
                         <button translatesAutoresizingMaskIntoConstraints="NO" id="ybX-RA-o0H" userLabel="more">
-                            <rect key="frame" x="50" y="0.0" width="35" height="19"/>
-                            <buttonCell key="cell" type="square" title="-     -" bezelStyle="shadowlessSquare" image="menu" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="3qo-SW-G4Z">
+                            <rect key="frame" x="45" y="0.0" width="30" height="19"/>
+                            <buttonCell key="cell" type="square" title=".     ." bezelStyle="shadowlessSquare" image="menu" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="3qo-SW-G4Z">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
@@ -80,6 +85,7 @@
             <constraints>
                 <constraint firstItem="TmC-Le-APu" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="0x8-4G-z2r"/>
                 <constraint firstItem="C66-PT-WNf" firstAttribute="centerY" secondItem="RqM-z2-cpO" secondAttribute="centerY" id="1yX-r6-ZzX"/>
+                <constraint firstItem="2Wq-i2-Lgz" firstAttribute="centerX" secondItem="TmC-Le-APu" secondAttribute="centerX" id="8RC-EH-4qp"/>
                 <constraint firstItem="TmC-Le-APu" firstAttribute="centerX" secondItem="RqM-z2-cpO" secondAttribute="centerX" id="DZr-3d-zGj"/>
                 <constraint firstItem="R3M-u6-Te1" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Li9-Pc-Kgj"/>
                 <constraint firstAttribute="trailing" secondItem="R3M-u6-Te1" secondAttribute="trailing" id="Mds-3d-jX1"/>
@@ -87,6 +93,7 @@
                 <constraint firstItem="Rgc-nJ-Hqo" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="XUi-Wi-va5"/>
                 <constraint firstItem="C66-PT-WNf" firstAttribute="centerX" secondItem="RqM-z2-cpO" secondAttribute="centerX" id="fJ3-FS-Twk"/>
                 <constraint firstItem="Rgc-nJ-Hqo" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="iWp-rF-x3X"/>
+                <constraint firstItem="2Wq-i2-Lgz" firstAttribute="centerY" secondItem="TmC-Le-APu" secondAttribute="centerY" constant="1" id="igD-Rq-B4c"/>
                 <constraint firstItem="RqM-z2-cpO" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="imP-j9-J3D"/>
                 <constraint firstItem="HMq-b7-Ycd" firstAttribute="centerY" secondItem="TmC-Le-APu" secondAttribute="centerY" id="l0i-Xk-Xeu"/>
                 <constraint firstItem="RqM-z2-cpO" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="rR6-ZO-Wou"/>
@@ -100,6 +107,7 @@
         <image name="close" width="16" height="17"/>
         <image name="menu" width="16" height="16"/>
         <image name="notch" width="160" height="21"/>
+        <image name="tape" width="52" height="16"/>
         <image name="topleft" width="13" height="13"/>
         <image name="topright" width="13" height="13"/>
     </resources>

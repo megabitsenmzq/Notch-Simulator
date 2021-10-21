@@ -12,6 +12,7 @@ class NotchViewController: NSViewController {
     
     @IBOutlet weak var centerImage: NSImageView!
     @IBOutlet weak var cameraImage: NSImageView!
+    @IBOutlet weak var tapeImage: NSImageView!
     @IBOutlet weak var lightImage: NSImageView!
     @IBOutlet weak var buttonView: NSStackView!
     var mouseTracking: NSTrackingArea?
@@ -41,14 +42,16 @@ class NotchViewController: NSViewController {
         guard let screenNumber = view.window?.screen?.deviceDescription[NSDeviceDescriptionKey(rawValue: "NSScreenNumber")] as? NSNumber else { return }
         let isBuildin = CGDisplayIsBuiltin(screenNumber.uint32Value)
         
-        cameraImage.isHidden = !isCameraEnabled || (isBuildin != 0 && isCameraExternalOnly)
-        lightImage.isHidden = !isCameraEnabled || !isCameraOn || (isBuildin != 0 && isCameraExternalOnly)
+        cameraImage.isHidden = !isCameraEnabled || isTapeOn || (isBuildin != 0 && isCameraExternalOnly)
+        lightImage.isHidden = !isCameraEnabled || !isCameraOn || isTapeOn || (isBuildin != 0 && isCameraExternalOnly)
+        tapeImage.isHidden = !isTapeOn || !isCameraEnabled || (isBuildin != 0 && isCameraExternalOnly)
     }
     
     func updateNotchImage() {
         centerImage.image = isShowBigNotch ? NSImage(named: "bigNotch") : NSImage(named: "notch")
         cameraImage.image = isShowBigNotch ? NSImage(named: "bigCamera") : NSImage(named: "camera")
         lightImage.image = isShowBigNotch ? NSImage(named: "bigCameraLight") : NSImage(named: "cameraLight")
+        tapeImage.image = isShowBigNotch ? NSImage(named: "bigTape") : NSImage(named: "tape")
         
         DispatchQueue.main.async {
             self.startMouseTracking()
@@ -78,9 +81,10 @@ class NotchViewController: NSViewController {
         NSApplication.shared.terminate(self)
     }
     
-    @IBAction func showMoreMenu(_ sender: Any) {
+    @IBAction func showMoreMenu(_ sender: NSButton) {
         let menu = moreMenu()
-        menu.popUp(positioning: nil, at: NSEvent.mouseLocation, in: nil)
+        let point = NSPoint(x: 0, y: sender.frame.maxY + 5)
+        menu.popUp(positioning: nil, at:point, in: sender)
     }
     
 }
@@ -104,6 +108,11 @@ extension NotchViewController {
         showCameraItem.state = isCameraEnabled ? .on : .off
         showCameraItem.target = self
         moreMenu.addItem(showCameraItem)
+        
+        let showTapeItem = NSMenuItem(title: "Put tape on it!", action: #selector(showTape), keyEquivalent: "")
+        showTapeItem.state = isTapeOn ? .on : .off
+        showTapeItem.target = self
+        moreMenu.addItem(showTapeItem)
         
         let turnOnCameraItem = NSMenuItem(title: "Turn on the camera", action: #selector(turnOnCamera), keyEquivalent: "")
         turnOnCameraItem.state = isCameraOn ? .on : .off
@@ -160,6 +169,11 @@ extension NotchViewController {
     
     @objc func turnOnCamera() {
         isCameraOn.toggle()
+        NotificationCenter.default.post(name: cameraToggledNotification, object: nil)
+    }
+    
+    @objc func showTape() {
+        isTapeOn.toggle()
         NotificationCenter.default.post(name: cameraToggledNotification, object: nil)
     }
     
