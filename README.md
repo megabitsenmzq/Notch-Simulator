@@ -8,11 +8,10 @@ Pretend you have the latest MacBook Pro! [Download](https://github.com/megabitse
 Thank you, everyone! Notch Simulator has been downloaded over 2000 times! 🎉
 
 
-Special thanks to: 🎉 [@hzlzh](https://twitter.com/hzlzh) for helping me to create the UI elements. 🎉
-
-Special thanks to: 🎉 [Miidii 谜底科技](https://miidii.app) 🎉
-
-Special thanks to: 🎉 [白描-图片转文字与文件证件扫描](https://baimiao.uzero.cn) 🎉
+### Special thanks to: 
+- 🎉 [@hzlzh](https://twitter.com/hzlzh) for helping me to create the UI elements. 🎉
+- 🎉 [Miidii 谜底科技](https://miidii.app) 🎉
+- 🎉 [白描-图片转文字与文件证件扫描](https://baimiao.uzero.cn) 🎉
 
 
 ![Icon](Icon.png)
