@@ -103,9 +103,9 @@
     </objects>
     <resources>
         <image name="camera" width="16" height="16"/>
-        <image name="cameraLight" width="4" height="4"/>
-        <image name="close" width="16" height="17"/>
-        <image name="menu" width="16" height="16"/>
+        <image name="cameraLight" width="4" height="5"/>
+        <image name="close" width="18" height="19"/>
+        <image name="menu" width="18" height="19"/>
         <image name="notch" width="160" height="21"/>
         <image name="tape" width="65" height="21"/>
         <image name="topleft" width="13" height="13"/>
