@@ -134,8 +134,11 @@ extension NotchViewController {
         moreMenu.addItem(NSMenuItem.separator())
         
         let notchInternalOnlyItem = NSMenuItem(title: "Notch for internal only", action: #selector(notchInternalOnly), keyEquivalent: "")
+        notchInternalOnlyItem.isEnabled = NSScreen.screens.contains(where: { $0.isBuiltinScreen })
         notchInternalOnlyItem.state = isNotchInternalOnly ? .on : .off
-        notchInternalOnlyItem.target = self
+        if notchInternalOnlyItem.isEnabled {
+            notchInternalOnlyItem.target = self
+        }
         moreMenu.addItem(notchInternalOnlyItem)
         
         let showBigNotchItem = NSMenuItem(title: "Bigger than Bigger", action: #selector(showBigNotch), keyEquivalent: "")

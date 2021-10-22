@@ -68,11 +68,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         for i in 0..<screens.count {
-            
-            guard let screenNumber = screens[i].deviceDescription[NSDeviceDescriptionKey(rawValue: "NSScreenNumber")] as? NSNumber else { return }
-            let isBuildin = CGDisplayIsBuiltin(screenNumber.uint32Value)
-            
-            if (isBuildin == 0) && isNotchInternalOnly { continue }
+            if !screens[i].isBuiltinScreen && isNotchInternalOnly { continue }
             
             let notchWindow = NotchWindow()
             notchWindow.targetScreen = screens[i]
@@ -81,7 +77,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             notchWindow.backgroundColor = .clear
             notchWindow.hasShadow = false
             notchWindow.level = .screenSaver
-            notchWindow.collectionBehavior =  [.canJoinAllSpaces, .fullScreenNone]
+            notchWindow.collectionBehavior =  [.canJoinAllSpaces, .fullScreenNone, .stationary]
             notchWindow.contentViewController = NotchViewController(nibName: "NotchViewController", bundle: nil)
             
             let screenFrame = screens[i].frame
