@@ -25,6 +25,9 @@ var isCameraExternalOnly = UserDefaults.standard.bool(forKey: "pref.isCameraExte
 var isNotchInternalOnly = UserDefaults.standard.bool(forKey: "pref.isNotchInternalOnly") {
     didSet { UserDefaults.standard.setValue(isNotchInternalOnly, forKey: "pref.isNotchInternalOnly") }}
 
+var isShowInMissionControl = !UserDefaults.standard.bool(forKey: "pref.isShowInMissionControl") {
+    didSet { UserDefaults.standard.setValue(!isShowInMissionControl, forKey: "pref.isShowInMissionControl") }}
+
 var isShowBigNotch = UserDefaults.standard.bool(forKey: "pref.isShowBigNotch") {
     didSet { UserDefaults.standard.setValue(isShowBigNotch, forKey: "pref.isShowBigNotch") }}
 
@@ -77,7 +80,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             notchWindow.backgroundColor = .clear
             notchWindow.hasShadow = false
             notchWindow.level = .screenSaver
-            notchWindow.collectionBehavior =  [.canJoinAllSpaces, .fullScreenNone, .stationary]
+            if isShowInMissionControl {
+                notchWindow.collectionBehavior =  [.canJoinAllSpaces, .fullScreenNone, .stationary]
+            } else {
+                notchWindow.collectionBehavior =  [.canJoinAllSpaces, .fullScreenNone]
+            }
             notchWindow.contentViewController = NotchViewController(nibName: "NotchViewController", bundle: nil)
             
             let screenFrame = screens[i].frame

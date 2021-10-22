@@ -140,6 +140,11 @@ extension NotchViewController {
         }
         moreMenu.addItem(notchInternalOnlyItem)
         
+        let showInMissionControlItem = NSMenuItem(title: "Visible in Mission Control", action: #selector(showInMissionControl), keyEquivalent: "")
+        showInMissionControlItem.state = isShowInMissionControl ? .on : .off
+        showInMissionControlItem.target = self
+        moreMenu.addItem(showInMissionControlItem)
+        
         let showBigNotchItem = NSMenuItem(title: "Bigger than Bigger", action: #selector(showBigNotch), keyEquivalent: "")
         showBigNotchItem.state = isShowBigNotch ? .on : .off
         showBigNotchItem.target = self
@@ -198,6 +203,13 @@ extension NotchViewController {
             isCameraExternalOnly = false
             NotificationCenter.default.post(name: cameraToggledNotification, object: nil)
         }
+        if let delegate = NSApplication.shared.delegate as? AppDelegate {
+            delegate.resetWindow()
+        }
+    }
+    
+    @objc func showInMissionControl() {
+        isShowInMissionControl.toggle()
         if let delegate = NSApplication.shared.delegate as? AppDelegate {
             delegate.resetWindow()
         }
