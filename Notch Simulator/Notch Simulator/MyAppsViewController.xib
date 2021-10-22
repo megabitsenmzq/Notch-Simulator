@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19162" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19162"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,11 +14,11 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="537" height="659"/>
+            <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="efq-2s-Xvm">
-                    <rect key="frame" x="18" y="623" width="421" height="16"/>
+                    <rect key="frame" x="18" y="584" width="422" height="16"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Thank you for trying this app! Why not also check out my other apps:" id="n3R-tA-xzy">
                         <font key="font" usesAppearanceFont="YES"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -26,52 +26,45 @@
                     </textFieldCell>
                 </textField>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eo7-hm-aEb">
-                    <rect key="frame" x="20" y="523" width="80" height="80"/>
+                    <rect key="frame" x="20" y="479" width="85" height="85"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="eo7-hm-aEb" secondAttribute="height" multiplier="1:1" id="jjF-YS-NrE"/>
-                        <constraint firstAttribute="width" constant="80" id="yfd-lF-Xrz"/>
+                        <constraint firstAttribute="width" constant="85" id="yfd-lF-Xrz"/>
                     </constraints>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Tomonow" id="FjJ-bI-giB"/>
                 </imageView>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PBx-P4-OlF">
-                    <rect key="frame" x="20" y="393" width="80" height="80"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="PBx-P4-OlF" secondAttribute="height" multiplier="1:1" id="QNu-C4-3kZ"/>
-                    </constraints>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Magic Share" id="W4w-qC-CV8"/>
-                </imageView>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NBy-yv-A2Q">
-                    <rect key="frame" x="20" y="260" width="83" height="83"/>
+                    <rect key="frame" x="20" y="356" width="83" height="83"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="NBy-yv-A2Q" secondAttribute="height" multiplier="1:1" id="TUL-mm-jih"/>
+                        <constraint firstAttribute="width" constant="83" id="hUS-hb-j0u"/>
                     </constraints>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="WillItRain" id="upx-Jn-zhj"/>
                 </imageView>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jUq-Ga-4ru">
-                    <rect key="frame" x="30" y="108" width="80" height="80"/>
+                    <rect key="frame" x="30" y="204" width="80" height="80"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="gwQ-PM-8q5"/>
                     </constraints>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="MDClock" id="j0B-IH-dpe"/>
                 </imageView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5kh-X2-nK2">
+                    <rect key="frame" x="38" y="89" width="65" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="65" id="NE1-h6-1YQ"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="BaiMiao" id="pn0-IK-l3w"/>
+                </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bF9-Su-o28">
-                    <rect key="frame" x="106" y="569" width="231" height="24"/>
+                    <rect key="frame" x="111" y="530" width="231" height="24"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="TomoNow 2 / PomoNow 2" id="JK1-v8-RZ5">
                         <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rMF-MD-GDy">
-                    <rect key="frame" x="106" y="439" width="113" height="24"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="Magic Share" id="5XL-Ux-pFU">
-                        <font key="font" metaFont="system" size="20"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="H6k-03-4mJ">
-                    <rect key="frame" x="109" y="309" width="81" height="24"/>
+                    <rect key="frame" x="109" y="405" width="81" height="24"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="下雨吗？" id="B5o-4F-wKp">
                         <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -79,39 +72,47 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AiD-jh-YO2">
-                    <rect key="frame" x="116" y="154" width="176" height="24"/>
+                    <rect key="frame" x="116" y="250" width="176" height="24"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="MD Clock 谜底时钟" id="q5r-Kt-yN4">
                         <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="B4A-Yh-q7I">
+                    <rect key="frame" x="116" y="130" width="44" height="24"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="白描" id="ZAT-h9-lUx">
+                        <font key="font" size="20" name=".PingFangSC-Regular"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uQu-10-BbR">
-                    <rect key="frame" x="106" y="545" width="176" height="16"/>
+                    <rect key="frame" x="111" y="506" width="176" height="16"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="A focus timer feels different." id="eld-zC-HJw">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5X2-Qa-71b">
-                    <rect key="frame" x="106" y="415" width="174" height="16"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="The easy way to share links." id="vRu-qz-IFQ">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1ic-3T-QBB">
-                    <rect key="frame" x="116" y="130" width="171" height="16"/>
+                    <rect key="frame" x="116" y="226" width="171" height="16"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Digital clock, timer, widgets" id="FY3-Bc-Nyh">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0rM-n8-WNF">
+                    <rect key="frame" x="116" y="106" width="164" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="图片转文字与文件证件扫描 " id="TKC-eG-j6e">
+                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fMY-TI-v9A">
-                    <rect key="frame" x="109" y="285" width="107" height="16"/>
+                    <rect key="frame" x="109" y="381" width="107" height="16"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="耿直的降雨预报。" id="psa-zN-NNi">
                         <font key="font" usesAppearanceFont="YES"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -119,7 +120,7 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o1U-TO-SPx">
-                    <rect key="frame" x="101" y="503" width="124" height="32"/>
+                    <rect key="frame" x="106" y="464" width="124" height="32"/>
                     <buttonCell key="cell" type="push" title="Mac App Store" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qwb-Wc-PQv">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -128,18 +129,8 @@
                         <action selector="openTomoNowLink:" target="-2" id="BlW-7v-8LW"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IoL-xu-rvS">
-                    <rect key="frame" x="101" y="373" width="124" height="32"/>
-                    <buttonCell key="cell" type="push" title="Mac App Store" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="K9p-Ox-oh7">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="openMagicShareLink:" target="-2" id="rk5-Ol-xEL"/>
-                    </connections>
-                </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="S9o-CQ-dIO">
-                    <rect key="frame" x="111" y="88" width="124" height="32"/>
+                    <rect key="frame" x="111" y="184" width="124" height="32"/>
                     <buttonCell key="cell" type="push" title="Mac App Store" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="m9c-wW-tjx">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -148,49 +139,51 @@
                         <action selector="openMDClockLink:" target="-2" id="H70-bH-40q"/>
                     </connections>
                 </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fqh-Je-CCX">
+                    <rect key="frame" x="111" y="64" width="158" height="32"/>
+                    <buttonCell key="cell" type="push" title="Mac / Android / Web" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Xdi-gO-VZb">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="openBaiMiaoLink:" target="-2" id="KVS-b7-KCB"/>
+                    </connections>
+                </button>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AE5-OB-41V">
-                    <rect key="frame" x="416" y="513" width="86" height="85"/>
+                    <rect key="frame" x="414" y="469" width="91" height="90"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="AE5-OB-41V" secondAttribute="height" multiplier="96:95" id="4VK-g7-zzg"/>
                     </constraints>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="TomoNow QR" id="SV6-AP-VxT"/>
                 </imageView>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T62-th-EFs">
-                    <rect key="frame" x="416" y="383" width="86" height="85"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="T62-th-EFs" secondAttribute="height" multiplier="96:95" id="L6j-NZ-rtP"/>
-                    </constraints>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Magic Share QR" id="1Kq-D3-W6U"/>
-                </imageView>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jFy-Qq-Mya">
-                    <rect key="frame" x="414" y="250" width="88" height="88"/>
+                    <rect key="frame" x="417" y="346" width="88" height="88"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="jFy-Qq-Mya" secondAttribute="height" multiplier="1:1" id="lhd-RC-H47"/>
                     </constraints>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="WillItRainQR" id="ono-ut-wM4"/>
                 </imageView>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qDd-X1-eGY">
-                    <rect key="frame" x="414" y="95" width="88" height="88"/>
+                    <rect key="frame" x="417" y="191" width="88" height="88"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="MDClock QR" id="qa8-N4-Nwp"/>
                 </imageView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IWs-YX-9YR">
+                    <rect key="frame" x="417" y="71" width="88" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="88" id="rQL-yn-avT"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="BaiMiaoQR" id="AWI-sG-Wx8"/>
+                </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Chf-fn-K1J">
-                    <rect key="frame" x="311" y="513" width="87" height="16"/>
+                    <rect key="frame" x="309" y="469" width="87" height="16"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="iOS QR Code:" id="rb9-CS-b4f">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ATg-bA-TtF">
-                    <rect key="frame" x="311" y="383" width="87" height="16"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="iOS QR Code:" id="lb6-RY-h4t">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UVT-Uu-C7g">
-                    <rect key="frame" x="309" y="250" width="87" height="16"/>
+                    <rect key="frame" x="312" y="346" width="87" height="16"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="iOS QR Code:" id="hBn-g8-yUO">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -198,7 +191,7 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0sg-RG-AGT">
-                    <rect key="frame" x="418" y="13" width="96" height="32"/>
+                    <rect key="frame" x="421" y="13" width="96" height="32"/>
                     <buttonCell key="cell" type="push" title="No thanks" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="StM-D7-JFk">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -216,7 +209,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8ro-ay-pjI">
-                    <rect key="frame" x="18" y="214" width="145" height="16"/>
+                    <rect key="frame" x="18" y="310" width="145" height="16"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Also apps from friends:" id="wii-ta-EqX">
                         <font key="font" usesAppearanceFont="YES"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -224,8 +217,16 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="R1r-SM-djX">
-                    <rect key="frame" x="309" y="95" width="87" height="16"/>
+                    <rect key="frame" x="312" y="191" width="87" height="16"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="iOS QR Code:" id="EqS-Q6-NbF">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hzZ-q6-rIw">
+                    <rect key="frame" x="337" y="71" width="62" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="QR Code:" id="taZ-TR-jsi">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -233,78 +234,77 @@
                 </textField>
             </subviews>
             <constraints>
+                <constraint firstItem="IWs-YX-9YR" firstAttribute="leading" secondItem="hzZ-q6-rIw" secondAttribute="trailing" constant="20" id="0bC-mT-zzL"/>
                 <constraint firstItem="fMY-TI-v9A" firstAttribute="top" secondItem="H6k-03-4mJ" secondAttribute="bottom" constant="8" symbolic="YES" id="0hS-mq-Egn"/>
                 <constraint firstItem="S9o-CQ-dIO" firstAttribute="leading" secondItem="AiD-jh-YO2" secondAttribute="leading" id="1cV-NM-mH4"/>
-                <constraint firstItem="T62-th-EFs" firstAttribute="top" secondItem="PBx-P4-OlF" secondAttribute="top" constant="5" id="1t3-tq-iMK"/>
+                <constraint firstItem="fqh-Je-CCX" firstAttribute="top" secondItem="0rM-n8-WNF" secondAttribute="bottom" constant="15" id="1iM-wy-2yN"/>
                 <constraint firstItem="uQu-10-BbR" firstAttribute="top" secondItem="bF9-Su-o28" secondAttribute="bottom" constant="8" symbolic="YES" id="1y6-9b-6X7"/>
                 <constraint firstItem="o1U-TO-SPx" firstAttribute="leading" secondItem="eo7-hm-aEb" secondAttribute="trailing" constant="8" symbolic="YES" id="30C-mF-vGt"/>
+                <constraint firstItem="B4A-Yh-q7I" firstAttribute="top" secondItem="5kh-X2-nK2" secondAttribute="top" id="3C4-Kz-qHk"/>
                 <constraint firstItem="jUq-Ga-4ru" firstAttribute="top" secondItem="8ro-ay-pjI" secondAttribute="bottom" constant="26" id="3Nc-uY-eYs"/>
                 <constraint firstItem="qDd-X1-eGY" firstAttribute="leading" secondItem="R1r-SM-djX" secondAttribute="trailing" constant="20" id="3QM-Kd-eag"/>
                 <constraint firstItem="eo7-hm-aEb" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="3lV-x8-vIa"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="efq-2s-Xvm" secondAttribute="trailing" id="4ay-hj-FCo"/>
                 <constraint firstItem="efq-2s-Xvm" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="4qx-sR-Am5"/>
+                <constraint firstItem="5kh-X2-nK2" firstAttribute="top" secondItem="jUq-Ga-4ru" secondAttribute="bottom" constant="50" id="59G-h7-zN5"/>
                 <constraint firstItem="8ro-ay-pjI" firstAttribute="top" secondItem="NBy-yv-A2Q" secondAttribute="bottom" constant="30" id="7FO-8D-PkT"/>
                 <constraint firstItem="AE5-OB-41V" firstAttribute="leading" secondItem="Chf-fn-K1J" secondAttribute="trailing" constant="20" id="7Ln-z0-3OA"/>
-                <constraint firstItem="5X2-Qa-71b" firstAttribute="top" secondItem="rMF-MD-GDy" secondAttribute="bottom" constant="8" symbolic="YES" id="7gy-2g-ddD"/>
                 <constraint firstAttribute="trailing" secondItem="jFy-Qq-Mya" secondAttribute="trailing" constant="35" id="7nT-44-4JE"/>
                 <constraint firstItem="jFy-Qq-Mya" firstAttribute="bottom" secondItem="NBy-yv-A2Q" secondAttribute="bottom" constant="10" id="8Bp-9B-IVi"/>
                 <constraint firstItem="DHb-wF-Cto" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="ASA-hD-elF"/>
-                <constraint firstItem="5X2-Qa-71b" firstAttribute="leading" secondItem="PBx-P4-OlF" secondAttribute="trailing" constant="8" symbolic="YES" id="AVY-GV-jd3"/>
                 <constraint firstAttribute="trailing" secondItem="qDd-X1-eGY" secondAttribute="trailing" constant="35" id="BIb-hw-NwW"/>
                 <constraint firstItem="AE5-OB-41V" firstAttribute="bottom" secondItem="eo7-hm-aEb" secondAttribute="bottom" constant="10" id="BIy-rz-4vM"/>
                 <constraint firstItem="UVT-Uu-C7g" firstAttribute="bottom" secondItem="jFy-Qq-Mya" secondAttribute="bottom" id="Bbr-Uw-CSy"/>
-                <constraint firstItem="NBy-yv-A2Q" firstAttribute="top" secondItem="PBx-P4-OlF" secondAttribute="bottom" constant="50" id="Bhg-pm-Z2Y"/>
                 <constraint firstItem="Chf-fn-K1J" firstAttribute="bottom" secondItem="AE5-OB-41V" secondAttribute="bottom" id="Bkz-1I-Trl"/>
-                <constraint firstItem="rMF-MD-GDy" firstAttribute="top" secondItem="PBx-P4-OlF" secondAttribute="top" constant="10" id="Es6-Bg-ryD"/>
-                <constraint firstItem="PBx-P4-OlF" firstAttribute="width" secondItem="eo7-hm-aEb" secondAttribute="width" id="FBE-HW-ZBo"/>
+                <constraint firstItem="0rM-n8-WNF" firstAttribute="top" secondItem="B4A-Yh-q7I" secondAttribute="bottom" constant="8" symbolic="YES" id="Cqy-nS-O2X"/>
                 <constraint firstItem="bF9-Su-o28" firstAttribute="leading" secondItem="eo7-hm-aEb" secondAttribute="trailing" constant="8" symbolic="YES" id="Fqo-vR-cOj"/>
+                <constraint firstItem="NBy-yv-A2Q" firstAttribute="top" secondItem="eo7-hm-aEb" secondAttribute="bottom" constant="40" id="HIh-gF-c8x"/>
                 <constraint firstItem="AiD-jh-YO2" firstAttribute="leading" secondItem="jUq-Ga-4ru" secondAttribute="trailing" constant="8" symbolic="YES" id="I6g-ve-96g"/>
-                <constraint firstItem="IoL-xu-rvS" firstAttribute="top" secondItem="5X2-Qa-71b" secondAttribute="bottom" constant="15" id="Juc-bF-d6x"/>
                 <constraint firstItem="uQu-10-BbR" firstAttribute="leading" secondItem="eo7-hm-aEb" secondAttribute="trailing" constant="8" symbolic="YES" id="LDW-kQ-mET"/>
                 <constraint firstItem="jFy-Qq-Mya" firstAttribute="top" secondItem="NBy-yv-A2Q" secondAttribute="top" constant="5" id="Ma4-uu-a8X"/>
+                <constraint firstItem="IWs-YX-9YR" firstAttribute="top" secondItem="B4A-Yh-q7I" secondAttribute="top" constant="-5" id="MaA-zJ-ww7"/>
                 <constraint firstItem="efq-2s-Xvm" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" symbolic="YES" id="NNg-eN-aE0"/>
                 <constraint firstAttribute="trailing" secondItem="AE5-OB-41V" secondAttribute="trailing" constant="35" id="OiU-H5-Ma9"/>
                 <constraint firstItem="jUq-Ga-4ru" firstAttribute="width" secondItem="jUq-Ga-4ru" secondAttribute="height" multiplier="1:1" id="PKJ-4f-yVe"/>
                 <constraint firstItem="qDd-X1-eGY" firstAttribute="width" secondItem="qDd-X1-eGY" secondAttribute="height" multiplier="1:1" id="TNl-iR-tcL"/>
                 <constraint firstItem="fMY-TI-v9A" firstAttribute="leading" secondItem="NBy-yv-A2Q" secondAttribute="trailing" constant="8" symbolic="YES" id="TOC-uk-f8h"/>
-                <constraint firstItem="PBx-P4-OlF" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="Tw7-xn-WXh"/>
                 <constraint firstItem="qDd-X1-eGY" firstAttribute="top" secondItem="AiD-jh-YO2" secondAttribute="top" constant="-5" id="UAs-BQ-fok"/>
                 <constraint firstItem="bF9-Su-o28" firstAttribute="top" secondItem="eo7-hm-aEb" secondAttribute="top" constant="10" id="UEb-Ww-PvQ"/>
-                <constraint firstItem="T62-th-EFs" firstAttribute="leading" secondItem="ATg-bA-TtF" secondAttribute="trailing" constant="20" id="VHu-hA-phc"/>
+                <constraint firstItem="IWs-YX-9YR" firstAttribute="width" secondItem="IWs-YX-9YR" secondAttribute="height" multiplier="1:1" id="V0Z-xD-iSJ"/>
                 <constraint firstItem="jFy-Qq-Mya" firstAttribute="leading" secondItem="UVT-Uu-C7g" secondAttribute="trailing" constant="20" id="Vse-04-X7C"/>
                 <constraint firstItem="jUq-Ga-4ru" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="30" id="Vz2-Sj-A6K"/>
                 <constraint firstAttribute="bottom" secondItem="DHb-wF-Cto" secondAttribute="bottom" constant="20" symbolic="YES" id="YZz-fy-LUJ"/>
                 <constraint firstItem="8ro-ay-pjI" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="Ydy-Xj-DMf"/>
+                <constraint firstItem="5kh-X2-nK2" firstAttribute="centerX" secondItem="jUq-Ga-4ru" secondAttribute="centerX" id="ZA1-mq-ItU"/>
                 <constraint firstAttribute="trailing" secondItem="0sg-RG-AGT" secondAttribute="trailing" constant="30" id="a0m-8v-OjM"/>
                 <constraint firstItem="R1r-SM-djX" firstAttribute="bottom" secondItem="qDd-X1-eGY" secondAttribute="bottom" id="aFh-b1-1NR"/>
                 <constraint firstItem="S9o-CQ-dIO" firstAttribute="top" secondItem="1ic-3T-QBB" secondAttribute="bottom" constant="15" id="aIn-kM-76D"/>
                 <constraint firstItem="o1U-TO-SPx" firstAttribute="top" secondItem="uQu-10-BbR" secondAttribute="bottom" constant="15" id="cOQ-y5-tM9"/>
-                <constraint firstItem="IoL-xu-rvS" firstAttribute="leading" secondItem="PBx-P4-OlF" secondAttribute="trailing" constant="8" symbolic="YES" id="dBR-Jl-Bn8"/>
                 <constraint firstItem="H6k-03-4mJ" firstAttribute="leading" secondItem="NBy-yv-A2Q" secondAttribute="trailing" constant="8" symbolic="YES" id="doH-Cu-vcK"/>
                 <constraint firstAttribute="bottom" secondItem="0sg-RG-AGT" secondAttribute="bottom" constant="20" symbolic="YES" id="egv-Vd-LIZ"/>
-                <constraint firstItem="NBy-yv-A2Q" firstAttribute="width" secondItem="PBx-P4-OlF" secondAttribute="width" multiplier="1.0375" id="fNB-EY-0ck"/>
-                <constraint firstItem="T62-th-EFs" firstAttribute="bottom" secondItem="PBx-P4-OlF" secondAttribute="bottom" constant="10" id="fln-sK-KEk"/>
+                <constraint firstItem="fqh-Je-CCX" firstAttribute="leading" secondItem="0rM-n8-WNF" secondAttribute="leading" id="frn-F5-J92"/>
+                <constraint firstItem="0rM-n8-WNF" firstAttribute="leading" secondItem="B4A-Yh-q7I" secondAttribute="leading" id="hnV-A3-Z4d"/>
+                <constraint firstItem="5kh-X2-nK2" firstAttribute="width" secondItem="5kh-X2-nK2" secondAttribute="height" multiplier="1:1" id="ifm-AT-Krj"/>
+                <constraint firstAttribute="trailing" secondItem="IWs-YX-9YR" secondAttribute="trailing" constant="35" id="lA0-0N-qnl"/>
                 <constraint firstItem="1ic-3T-QBB" firstAttribute="top" secondItem="AiD-jh-YO2" secondAttribute="bottom" constant="8" symbolic="YES" id="lBh-rF-iZW"/>
                 <constraint firstItem="1ic-3T-QBB" firstAttribute="leading" secondItem="AiD-jh-YO2" secondAttribute="leading" id="lcv-Vu-RMa"/>
                 <constraint firstItem="AE5-OB-41V" firstAttribute="top" secondItem="eo7-hm-aEb" secondAttribute="top" constant="5" id="lkE-aY-7yh"/>
+                <constraint firstItem="B4A-Yh-q7I" firstAttribute="leading" secondItem="AiD-jh-YO2" secondAttribute="leading" id="lte-Jf-sml"/>
                 <constraint firstItem="qDd-X1-eGY" firstAttribute="width" secondItem="jFy-Qq-Mya" secondAttribute="width" id="ltj-T0-oqx"/>
                 <constraint firstItem="H6k-03-4mJ" firstAttribute="top" secondItem="NBy-yv-A2Q" secondAttribute="top" constant="10" id="o2W-tL-Jzl"/>
                 <constraint firstItem="NBy-yv-A2Q" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="oAK-Gf-UgU"/>
-                <constraint firstItem="ATg-bA-TtF" firstAttribute="bottom" secondItem="T62-th-EFs" secondAttribute="bottom" id="odA-uZ-Ycc"/>
-                <constraint firstAttribute="trailing" secondItem="T62-th-EFs" secondAttribute="trailing" constant="35" id="uBr-ht-d4M"/>
-                <constraint firstItem="PBx-P4-OlF" firstAttribute="top" secondItem="eo7-hm-aEb" secondAttribute="bottom" constant="50" id="uhi-jS-21s"/>
-                <constraint firstItem="rMF-MD-GDy" firstAttribute="leading" secondItem="PBx-P4-OlF" secondAttribute="trailing" constant="8" symbolic="YES" id="vY7-Qo-FPt"/>
+                <constraint firstItem="hzZ-q6-rIw" firstAttribute="bottom" secondItem="IWs-YX-9YR" secondAttribute="bottom" id="uOj-Vc-7Tt"/>
                 <constraint firstItem="AiD-jh-YO2" firstAttribute="top" secondItem="jUq-Ga-4ru" secondAttribute="top" constant="10" id="x8F-UX-2ef"/>
                 <constraint firstItem="eo7-hm-aEb" firstAttribute="top" secondItem="efq-2s-Xvm" secondAttribute="bottom" constant="20" id="zan-Lv-kak"/>
             </constraints>
-            <point key="canvasLocation" x="147.5" y="316.5"/>
+            <point key="canvasLocation" x="147.5" y="296.5"/>
         </customView>
     </objects>
     <resources>
+        <image name="BaiMiao" width="256" height="256"/>
+        <image name="BaiMiaoQR" width="500" height="500"/>
         <image name="MDClock" width="115" height="115"/>
         <image name="MDClock QR" width="500" height="500"/>
-        <image name="Magic Share" width="64" height="64"/>
-        <image name="Magic Share QR" width="500" height="500"/>
         <image name="TomoNow QR" width="500" height="500"/>
         <image name="Tomonow" width="64" height="64"/>
         <image name="WillItRain" width="64" height="64"/>
