@@ -9,6 +9,10 @@ import Cocoa
 
 extension NSScreen {
     
+    static var haveBuiltinScreen: Bool {
+        NSScreen.screens.contains(where: { $0.isBuiltinScreen })
+    }
+    
     var isBuiltinScreen: Bool {
         guard let screenNumber = deviceDescription[NSDeviceDescriptionKey(rawValue: "NSScreenNumber")] as? NSNumber else {
             return false

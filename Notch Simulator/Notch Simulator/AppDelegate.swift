@@ -68,7 +68,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         for i in 0..<screens.count {
-            if !screens[i].isBuiltinScreen && isNotchInternalOnly { continue }
+            if !screens[i].isBuiltinScreen && (isNotchInternalOnly && NSScreen.haveBuiltinScreen) { continue }
             
             let notchWindow = NotchWindow()
             notchWindow.targetScreen = screens[i]

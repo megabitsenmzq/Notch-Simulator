@@ -134,9 +134,8 @@ extension NotchViewController {
         moreMenu.addItem(NSMenuItem.separator())
         
         let notchInternalOnlyItem = NSMenuItem(title: "Notch for internal only", action: #selector(notchInternalOnly), keyEquivalent: "")
-        let haveBuiltinScreen = NSScreen.screens.contains(where: { $0.isBuiltinScreen })
         notchInternalOnlyItem.state = isNotchInternalOnly ? .on : .off
-        if haveBuiltinScreen {
+        if NSScreen.haveBuiltinScreen {
             notchInternalOnlyItem.target = self
         }
         moreMenu.addItem(notchInternalOnlyItem)
