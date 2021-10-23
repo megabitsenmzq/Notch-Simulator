@@ -97,26 +97,19 @@ extension NotchViewController {
     func moreMenu() -> NSMenu {
         let moreMenu = NSMenu()
         
-        let runAtLoginItem = NSMenuItem(title: "Run at login", action: #selector(changeRunAtLogin), keyEquivalent: "")
+        let runAtLoginItem = NSMenuItem(title: NSLocalizedString("Run at login", comment: ""), action: #selector(changeRunAtLogin), keyEquivalent: "")
         runAtLoginItem.state = isRunAtLoginEnabled ? .on : .off
         runAtLoginItem.target = self
         moreMenu.addItem(runAtLoginItem)
         
         moreMenu.addItem(NSMenuItem.separator())
         
-        let showCameraItem = NSMenuItem(title: "Show camera", action: #selector(showCamera), keyEquivalent: "")
+        let showCameraItem = NSMenuItem(title: NSLocalizedString("Show camera", comment: ""), action: #selector(showCamera), keyEquivalent: "")
         showCameraItem.state = isCameraEnabled ? .on : .off
         showCameraItem.target = self
         moreMenu.addItem(showCameraItem)
         
-        let showTapeItem = NSMenuItem(title: "Put tape on it!", action: #selector(showTape), keyEquivalent: "")
-        showTapeItem.state = isTapeOn ? .on : .off
-        if isCameraEnabled {
-            showTapeItem.target = self
-        }
-        moreMenu.addItem(showTapeItem)
-        
-        let turnOnCameraItem = NSMenuItem(title: "Turn on the camera", action: #selector(turnOnCamera), keyEquivalent: "")
+        let turnOnCameraItem = NSMenuItem(title: NSLocalizedString("Turn on the camera", comment: ""), action: #selector(turnOnCamera), keyEquivalent: "")
         turnOnCameraItem.state = isCameraOn ? .on : .off
         turnOnCameraItem.isEnabled = isCameraEnabled
         if isCameraEnabled {
@@ -124,7 +117,14 @@ extension NotchViewController {
         }
         moreMenu.addItem(turnOnCameraItem)
         
-        let externalOnlyItem = NSMenuItem(title: "Camera for external only", action: #selector(cameraExternalOnly), keyEquivalent: "")
+        let showTapeItem = NSMenuItem(title: NSLocalizedString("Put tape on it!", comment: ""), action: #selector(showTape), keyEquivalent: "")
+        showTapeItem.state = isTapeOn ? .on : .off
+        if isCameraEnabled {
+            showTapeItem.target = self
+        }
+        moreMenu.addItem(showTapeItem)
+        
+        let externalOnlyItem = NSMenuItem(title: NSLocalizedString("Camera for external only", comment: ""), action: #selector(cameraExternalOnly), keyEquivalent: "")
         externalOnlyItem.state = isCameraExternalOnly ? .on : .off
         if isCameraEnabled {
             externalOnlyItem.target = self
@@ -133,30 +133,30 @@ extension NotchViewController {
         
         moreMenu.addItem(NSMenuItem.separator())
         
-        let notchInternalOnlyItem = NSMenuItem(title: "Notch for internal only", action: #selector(notchInternalOnly), keyEquivalent: "")
+        let notchInternalOnlyItem = NSMenuItem(title: NSLocalizedString("Notch for internal only", comment: ""), action: #selector(notchInternalOnly), keyEquivalent: "")
         notchInternalOnlyItem.state = isNotchInternalOnly ? .on : .off
         if NSScreen.haveBuiltinScreen {
             notchInternalOnlyItem.target = self
         }
         moreMenu.addItem(notchInternalOnlyItem)
         
-        let showInMissionControlItem = NSMenuItem(title: "Visible in Mission Control", action: #selector(showInMissionControl), keyEquivalent: "")
+        let showInMissionControlItem = NSMenuItem(title: NSLocalizedString("Visible in Mission Control", comment: ""), action: #selector(showInMissionControl), keyEquivalent: "")
         showInMissionControlItem.state = isShowInMissionControl ? .on : .off
         showInMissionControlItem.target = self
         moreMenu.addItem(showInMissionControlItem)
         
-        let showBigNotchItem = NSMenuItem(title: "Bigger than Bigger", action: #selector(showBigNotch), keyEquivalent: "")
+        let showBigNotchItem = NSMenuItem(title: NSLocalizedString("Bigger than Bigger", comment: ""), action: #selector(showBigNotch), keyEquivalent: "")
         showBigNotchItem.state = isShowBigNotch ? .on : .off
         showBigNotchItem.target = self
         moreMenu.addItem(showBigNotchItem)
         
         moreMenu.addItem(NSMenuItem.separator())
         
-        let githubItem = NSMenuItem(title: "GitHub Page", action: #selector(github), keyEquivalent: "")
+        let githubItem = NSMenuItem(title: NSLocalizedString("GitHub Page", comment: ""), action: #selector(github), keyEquivalent: "")
         githubItem.target = self
         moreMenu.addItem(githubItem)
         
-        let myAppsItem = NSMenuItem(title: "My other apps", action: #selector(showApps), keyEquivalent: "")
+        let myAppsItem = NSMenuItem(title: NSLocalizedString("My other apps", comment: ""), action: #selector(showApps), keyEquivalent: "")
         myAppsItem.target = self
         moreMenu.addItem(myAppsItem)
         

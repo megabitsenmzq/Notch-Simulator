@@ -26,7 +26,7 @@ Twitter：[@Megabits](https://twitter.com/Megabits_mzq)
 ![Preview](NewNotchPreiew1.png)
 
 - Fake camera support.
-- Put tape on the cameras.
+- Put tape on the cameras. (Fifteen Hundred Megawatt Notch Science Heavy Duty Super-Blocking Super Tape™)
 - Work on all screens.
 - Huge notch option. (5x bigger! 5x rich!)
 - Hover to reveal the quit button.

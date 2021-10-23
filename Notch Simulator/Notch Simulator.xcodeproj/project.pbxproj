@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C00B10442723DC760091F8F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C00B10422723DC760091F8F6 /* Localizable.strings */; };
 		C02ECAC7271FFB06002E33D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C02ECAC6271FFB06002E33D1 /* main.m */; };
 		C02ECAD127201EEF002E33D1 /* Notch Simulator Helper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = C02ECABC271FFAFA002E33D1 /* Notch Simulator Helper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C05C0B79271E59D6007BDF89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05C0B78271E59D6007BDF89 /* AppDelegate.swift */; };
@@ -34,6 +35,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C00B10432723DC760091F8F6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C00B10452723DC880091F8F6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		C00B10462723DC8F0091F8F6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		C02ECABC271FFAFA002E33D1 /* Notch Simulator Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Notch Simulator Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02ECAC6271FFB06002E33D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C02ECAC8271FFB06002E33D1 /* Notch_Simulator_Helper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Notch_Simulator_Helper.entitlements; sourceTree = "<group>"; };
@@ -110,8 +114,9 @@
 				C05C0B8E271E861F007BDF89 /* MyAppsViewController.swift */,
 				EDA567CE2721D373008B4C41 /* NSScreen+Extensions.swift */,
 				C05C0B7C271E59DA007BDF89 /* MainMenu.xib */,
-				C05C0B7F271E59DA007BDF89 /* Notch_Simulator.entitlements */,
 				C05C0B8D271E6783007BDF89 /* Notch-Simulator-Info.plist */,
+				C00B10422723DC760091F8F6 /* Localizable.strings */,
+				C05C0B7F271E59DA007BDF89 /* Notch_Simulator.entitlements */,
 			);
 			path = "Notch Simulator";
 			sourceTree = "<group>";
@@ -179,6 +184,9 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
+				ja,
 			);
 			mainGroup = C05C0B6C271E59D6007BDF89;
 			productRefGroup = C05C0B76271E59D6007BDF89 /* Products */;
@@ -203,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C00B10442723DC760091F8F6 /* Localizable.strings in Resources */,
 				C05C0B8A271E5D5C007BDF89 /* NotchViewController.xib in Resources */,
 				C05C0B7B271E59DA007BDF89 /* Assets.xcassets in Resources */,
 				C05C0B91271E861F007BDF89 /* MyAppsViewController.xib in Resources */,
@@ -236,6 +245,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		C00B10422723DC760091F8F6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C00B10432723DC760091F8F6 /* ja */,
+				C00B10452723DC880091F8F6 /* zh-Hans */,
+				C00B10462723DC8F0091F8F6 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		C05C0B7C271E59DA007BDF89 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -311,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -372,6 +393,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
