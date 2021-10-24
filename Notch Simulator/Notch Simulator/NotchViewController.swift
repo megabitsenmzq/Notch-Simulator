@@ -156,6 +156,10 @@ extension NotchViewController {
         githubItem.target = self
         moreMenu.addItem(githubItem)
         
+        let twitterItem = NSMenuItem(title: NSLocalizedString("My Twitter", comment: ""), action: #selector(twitter), keyEquivalent: "")
+        twitterItem.target = self
+        moreMenu.addItem(twitterItem)
+        
         let myAppsItem = NSMenuItem(title: NSLocalizedString("My other apps", comment: ""), action: #selector(showApps), keyEquivalent: "")
         myAppsItem.target = self
         moreMenu.addItem(myAppsItem)
@@ -222,6 +226,10 @@ extension NotchViewController {
     
     @objc func github() {
         NSWorkspace.shared.open(URL(string: "https://github.com/megabitsenmzq/Notch-Simulator")!)
+    }
+    
+    @objc func twitter() {
+        NSWorkspace.shared.open(URL(string: "https://twitter.com/Megabits_mzq")!)
     }
     
     @objc func showApps() {
