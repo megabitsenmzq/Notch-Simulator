@@ -5,7 +5,7 @@
 
 Pretend you have the latest MacBook Pro! [Download](https://github.com/megabitsenmzq/Notch-Simulator/releases/download/2.0/Notch.Simulator.zip)
 
-Thank you, everyone! Notch Simulator has been downloaded over 2000 times! 🎉
+Thank you, everyone! Notch Simulator has been downloaded over 3000 times! 🎉
 
 Twitter：[@Megabits](https://twitter.com/Megabits_mzq)
 
