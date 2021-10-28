@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19162" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19162"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -30,9 +30,13 @@
                     <rect key="frame" x="232" y="256" width="16" height="16"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="camera" id="dan-ov-1OZ"/>
                 </imageView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HMq-b7-Ycd" userLabel="light">
+                    <rect key="frame" x="256" y="261" width="4" height="5"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="cameraLight" id="fnX-hc-7Ya"/>
+                </imageView>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Wq-i2-Lgz" userLabel="tape">
-                    <rect key="frame" x="208" y="253" width="65" height="21"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="tape" id="7kj-fr-VPw"/>
+                    <rect key="frame" x="208" y="252" width="65" height="21"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="tape1" id="7kj-fr-VPw"/>
                 </imageView>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R3M-u6-Te1" userLabel="right">
                     <rect key="frame" x="467" y="259" width="13" height="13"/>
@@ -77,13 +81,8 @@
                         <real value="3.4028234663852886e+38"/>
                     </customSpacing>
                 </stackView>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HMq-b7-Ycd" userLabel="light">
-                    <rect key="frame" x="256" y="262" width="4" height="5"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="cameraLight" id="fnX-hc-7Ya"/>
-                </imageView>
             </subviews>
             <constraints>
-                <constraint firstItem="TmC-Le-APu" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="0x8-4G-z2r"/>
                 <constraint firstItem="C66-PT-WNf" firstAttribute="centerY" secondItem="RqM-z2-cpO" secondAttribute="centerY" id="1yX-r6-ZzX"/>
                 <constraint firstItem="2Wq-i2-Lgz" firstAttribute="centerX" secondItem="TmC-Le-APu" secondAttribute="centerX" id="8RC-EH-4qp"/>
                 <constraint firstItem="TmC-Le-APu" firstAttribute="centerX" secondItem="RqM-z2-cpO" secondAttribute="centerX" id="DZr-3d-zGj"/>
@@ -97,6 +96,7 @@
                 <constraint firstItem="RqM-z2-cpO" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="imP-j9-J3D"/>
                 <constraint firstItem="HMq-b7-Ycd" firstAttribute="centerY" secondItem="TmC-Le-APu" secondAttribute="centerY" id="l0i-Xk-Xeu"/>
                 <constraint firstItem="RqM-z2-cpO" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="rR6-ZO-Wou"/>
+                <constraint firstItem="TmC-Le-APu" firstAttribute="centerY" secondItem="RqM-z2-cpO" secondAttribute="centerY" constant="-2" id="zjh-Fa-WIM"/>
             </constraints>
             <point key="canvasLocation" x="140" y="154"/>
         </customView>
@@ -107,7 +107,7 @@
         <image name="close" width="18" height="19"/>
         <image name="menu" width="18" height="19"/>
         <image name="notch" width="160" height="21"/>
-        <image name="tape" width="65" height="21"/>
+        <image name="tape1" width="65" height="21"/>
         <image name="topleft" width="13" height="13"/>
         <image name="topright" width="13" height="13"/>
     </resources>

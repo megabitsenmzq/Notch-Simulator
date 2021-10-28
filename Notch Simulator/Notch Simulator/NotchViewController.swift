@@ -17,8 +17,8 @@ class NotchViewController: NSViewController {
     @IBOutlet weak var buttonView: NSStackView!
     var mouseTracking: NSTrackingArea?
     
-    let cameraToggledNotification = Notification.Name("cameraToggled")
-    let bigNotchToggledNotification = Notification.Name("bigNotchToggled")
+    let updateCameraToggledNotification = Notification.Name("cameraToggled")
+    let updateImageNotification = Notification.Name("bigNotchToggled")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +28,12 @@ class NotchViewController: NSViewController {
         super.viewDidAppear()
         
         updateCamera()
-        NotificationCenter.default.addObserver(forName: cameraToggledNotification, object: nil, queue: nil) { _ in
+        NotificationCenter.default.addObserver(forName: updateCameraToggledNotification, object: nil, queue: nil) { _ in
             self.updateCamera()
         }
         
         updateNotchImage()
-        NotificationCenter.default.addObserver(forName: bigNotchToggledNotification, object: nil, queue: nil, using: { _ in
+        NotificationCenter.default.addObserver(forName: updateImageNotification, object: nil, queue: nil, using: { _ in
             self.updateNotchImage()
         })
     }
@@ -42,16 +42,18 @@ class NotchViewController: NSViewController {
         guard let screenNumber = view.window?.screen?.deviceDescription[NSDeviceDescriptionKey(rawValue: "NSScreenNumber")] as? NSNumber else { return }
         let isBuildin = CGDisplayIsBuiltin(screenNumber.uint32Value)
         
-        cameraImage.isHidden = !isCameraEnabled || isTapeOn || (isBuildin != 0 && isCameraExternalOnly)
-        lightImage.isHidden = !isCameraEnabled || !isCameraOn || isTapeOn || (isBuildin != 0 && isCameraExternalOnly)
+        cameraImage.isHidden = !isCameraEnabled || (isBuildin != 0 && isCameraExternalOnly)
+        lightImage.isHidden = !isCameraEnabled || !isCameraOn || (isBuildin != 0 && isCameraExternalOnly)
         tapeImage.isHidden = !isTapeOn || !isCameraEnabled || (isBuildin != 0 && isCameraExternalOnly)
     }
     
     func updateNotchImage() {
+        if tapeID == 0 { tapeID += 1 }
+        
         centerImage.image = isShowBigNotch ? NSImage(named: "bigNotch") : NSImage(named: "notch")
         cameraImage.image = isShowBigNotch ? NSImage(named: "bigCamera") : NSImage(named: "camera")
         lightImage.image = isShowBigNotch ? NSImage(named: "bigCameraLight") : NSImage(named: "cameraLight")
-        tapeImage.image = isShowBigNotch ? NSImage(named: "bigTape") : NSImage(named: "tape")
+        tapeImage.image = isShowBigNotch ? NSImage(named: "bigTape\(tapeID)") : NSImage(named: "tape\(tapeID)")
         
         DispatchQueue.main.async {
             self.startMouseTracking()
@@ -177,17 +179,22 @@ extension NotchViewController {
     
     @objc func showCamera() {
         isCameraEnabled.toggle()
-        NotificationCenter.default.post(name: cameraToggledNotification, object: nil)
+        NotificationCenter.default.post(name: updateCameraToggledNotification, object: nil)
     }
     
     @objc func turnOnCamera() {
         isCameraOn.toggle()
-        NotificationCenter.default.post(name: cameraToggledNotification, object: nil)
+        NotificationCenter.default.post(name: updateCameraToggledNotification, object: nil)
     }
     
     @objc func showTape() {
         isTapeOn.toggle()
-        NotificationCenter.default.post(name: cameraToggledNotification, object: nil)
+        if isTapeOn {
+            tapeID += 1
+            if NSImage(named: "tape\(tapeID)") == nil { tapeID = 0 }
+        }
+        NotificationCenter.default.post(name: updateImageNotification, object: nil)
+        NotificationCenter.default.post(name: updateCameraToggledNotification, object: nil)
     }
     
     @objc func cameraExternalOnly() {
@@ -198,14 +205,14 @@ extension NotchViewController {
                 delegate.resetWindow()
             }
         }
-        NotificationCenter.default.post(name: cameraToggledNotification, object: nil)
+        NotificationCenter.default.post(name: updateCameraToggledNotification, object: nil)
     }
     
     @objc func notchInternalOnly() {
         isNotchInternalOnly.toggle()
         if isNotchInternalOnly {
             isCameraExternalOnly = false
-            NotificationCenter.default.post(name: cameraToggledNotification, object: nil)
+            NotificationCenter.default.post(name: updateCameraToggledNotification, object: nil)
         }
         if let delegate = NSApplication.shared.delegate as? AppDelegate {
             delegate.resetWindow()
@@ -221,7 +228,7 @@ extension NotchViewController {
     
     @objc func showBigNotch() {
         isShowBigNotch.toggle()
-        NotificationCenter.default.post(name: bigNotchToggledNotification, object: nil)
+        NotificationCenter.default.post(name: updateImageNotification, object: nil)
     }
     
     @objc func github() {

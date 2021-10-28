@@ -19,6 +19,9 @@ var isCameraOn = UserDefaults.standard.bool(forKey: "pref.isCameraOn") {
 var isTapeOn = UserDefaults.standard.bool(forKey: "pref.isTapeOn") {
     didSet { UserDefaults.standard.setValue(isTapeOn, forKey: "pref.isTapeOn") }}
 
+var tapeID = UserDefaults.standard.integer(forKey: "pref.tapeID") {
+    didSet { UserDefaults.standard.setValue(tapeID, forKey: "pref.tapeID") }}
+
 var isCameraExternalOnly = UserDefaults.standard.bool(forKey: "pref.isCameraExternalOnly") {
     didSet { UserDefaults.standard.setValue(isCameraExternalOnly, forKey: "pref.isCameraExternalOnly") }}
 
