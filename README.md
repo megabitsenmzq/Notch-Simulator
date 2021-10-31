@@ -37,7 +37,7 @@ If you have encountered permission problems while trying to run the app, you can
 [Permissions Reset](https://ohanaware.com/permissionsreset/)
 
 ## Build
-Open Notch-Simulator/Notch Simulator in terminal,run `make` to build or use github action to build without local machine
+Open Notch-Simulator folder in terminal,run `make` to build or use github action to build without local machine
 
 ### My Apps
 
