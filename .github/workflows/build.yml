@@ -18,4 +18,4 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
          name: Notch Simulator.app
-         path: "Notch\ Simulator/app/Notch\ Simulator.zip"
+         path: "Notch\ Simulator/Notch\ Simulator.zip"
