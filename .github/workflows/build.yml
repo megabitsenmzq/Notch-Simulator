@@ -8,9 +8,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build
         run: |
-          cd Notch\ Simulator
-          xcodebuild clean build CODE_SIGNING_ALLOWED=NO ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO PRODUCT_BUNDLE_IDENTIFIER="com.JinyuMeng.Notch-Simulator" -sdk macosx -scheme "Notch Simulator" -configuration Release -derivedDataPath build
-          cp -R build/Build/Products/Release/Notch\ Simulator.app ./
+          xcodebuild clean build -project "Notch Simulator/Notch Simulator.xcodeproj" CODE_SIGNING_ALLOWED=NO ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO PRODUCT_BUNDLE_IDENTIFIER="com.JinyuMeng.Notch-Simulator" -sdk macosx -scheme "Notch Simulator" -configuration Release -derivedDataPath build
           zip -r Notch\ Simulator.zip Notch\ Simulator.app
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.4
