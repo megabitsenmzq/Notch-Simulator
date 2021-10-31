@@ -14,5 +14,5 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
-         name: Notch Simulator.app
+         name: Notch Simulator app
          path: "Notch Simulator.zip"
