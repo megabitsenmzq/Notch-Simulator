@@ -35,6 +35,9 @@ Twitter：[@Megabits](https://twitter.com/Megabits_mzq)
 If you have encountered permission problems while trying to run the app, you can use this tool to solve it: 
 [Permissions Reset](https://ohanaware.com/permissionsreset/)
 
+## Build
+cd Notch-Simulator/Notch Simulator in terminal,run `make` to build 
+
 ### My Apps
 
 - TomoNow 2 / PomoNow 2 (A focus timer feels different.): [App Store](https://apps.apple.com/us/app/id1505296579)
